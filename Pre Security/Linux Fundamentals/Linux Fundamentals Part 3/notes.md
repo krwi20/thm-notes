@@ -295,7 +295,7 @@ Maintaining Your System: Logs
 - these files and folders contain logging information for applications and services running on your system
 - the os has become pretty good at automatically managing these logs in a process that is known as "rotating"
 
-![log example](log_example.png "log example")
+![log example](images/log_example.png "log example")
 
 - the image above highlights some logs from three services running on a Ubuntu machine
 - an apache2 web server
@@ -308,7 +308,7 @@ Maintaining Your System: Logs
 - e.g. the two types of log files below that are of interest
 - access log & error log
 
-![log example 2](log_example_2.png "log example 2")
+![log example 2](images/log_example_2.png "log example 2")
 
 - these are of course logs that store information about how the os is running itself and actions that are performed by users, such as auth attempts
 

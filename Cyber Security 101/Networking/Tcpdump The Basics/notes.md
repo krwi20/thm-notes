@@ -34,7 +34,7 @@ Specify the Network Interface
 - a commdn such as 'ip address show' (or merely 'ip a s') would list the available network interfaces
 - in the terminal below we see one network card 'ens5' in addition to the loopback address
 
-![ip_address_show_example](ip_address_show_example.png "ip_address_show_example")
+![ip_address_show_example](images/ip_address_show_example.png "ip_address_show_example")
 
 Save the Captured Packets
 - in many cases you should check the captured packets again later
@@ -62,7 +62,7 @@ Don't Resolve IP Addresses and Port Number
 - consider the following example shwon in the terminal below
 - we captured 5 packets without resolving the IP addresses
 
-![dont_resolve_ip_addr_and_port_num_example](dont_resolve_ip_addr_and_port_num_example.png "dont_resolve_ip_addr_and_port_num_example")
+![dont_resolve_ip_addr_and_port_num_example](images/dont_resolve_ip_addr_and_port_num_example.png "dont_resolve_ip_addr_and_port_num_example")
 
 Produce (More) Verbose Output
 - if you want to print more details about the packets you can use '-v' to produce a slightly more verbose output
@@ -72,7 +72,7 @@ Produce (More) Verbose Output
 Summary and Examples
 - the table below provides a summary of the command line options that we covered
 
-![summary_and_examples_table](summary_and_examples_table.png "summary_and_examples_table")
+![summary_and_examples_table](images/summary_and_examples_table.png "summary_and_examples_table")
 
 - consider the following examples:
 - 'tcpdump -i eth0 -c 50 -v' captures and displays 50 packets by listening on the eth0 interface, which is a wired Ethernet and displays them verbosely
@@ -93,7 +93,7 @@ Filtering by Host
 - in the terminal below we capture all the packets exchanged with example.com and save them to http.pcap
 - it is important to note that capturing packets requires you to be logged-in as root or to use sudo
 
-![filtering_by_host_example](filtering_by_host_example.png "filtering_by_host_example")
+![filtering_by_host_example](images/filtering_by_host_example.png "filtering_by_host_example")
 
 - if you want to limit the packets to those from a particular source IP address or hostname, you must use 'src host IP' or 'src host HOSTNAME'
 - similarly you can limit packets to those sent to a specific destination using 'dst host IP' or 'dst host HOSTNAME'
@@ -106,7 +106,7 @@ Filtering by Port
 - the first query requests the IPv4 address used by example.com
 - while the second requests the IPv6 address associated with example.org
 
-![fltering_by_port_example](fltering_by_port_example.png "fltering_by_port_example")
+![fltering_by_port_example](images/fltering_by_port_example.png "fltering_by_port_example")
 
 - in the above example we captured all the packets sent to or from a specific port number
 - you can limit the packets to those from a particular source port number or to a particular destination port number using 'src port PORT_NUMBER' and 'dst port PORT_NUMBER' respectively
@@ -118,7 +118,7 @@ Filtering by Protocol
 - we can see an ICMP echo request and reply, which is a possible indication that someone is running the 'ping' command
 - there is also an ICMP time exceeded; this might be due to running the 'traceroute' command 
 
-![filtering_by_protocol_example](filtering_by_protocol_example.png "filtering_by_protocol_example")
+![filtering_by_protocol_example](images/filtering_by_protocol_example.png "filtering_by_protocol_example")
 
 Logical Operators
 - three logical opertors that can be handy:
@@ -129,7 +129,7 @@ Logical Operators
 Summary and Examples
 - the table below offers a summary of the command line options that we covered
 
-![summary_and_examples_table_2](summary_and_examples_table_2.png "summary_and_examples_table_2")
+![summary_and_examples_table_2](images/summary_and_examples_table_2.png "summary_and_examples_table_2")
 
 - consider the following examples:
 - 'tcpdump -i any tcp port 22' listens on all interfaces and captures tcp packets to or from port 22 e.g. SSH traffic
@@ -145,22 +145,22 @@ Summary and Examples
 - please note that we add '-n' to avoid unnecessary delays in attempting to resolve IP addresses
 - in the example below we didnt use 'sudo' as reading from a packet capture file does not require 'root' privileges
 
-![tcpdump_read_example](tcpdump_read_example.png "tcpdump_read_example")
+![tcpdump_read_example](images/tcpdump_read_example.png "tcpdump_read_example")
 
 How many packets in traffic.pcap use the ICMP protocol?
 - 26
 
-![task_1_answer](task_1_answer.png "task_1_answer")
+![task_1_answer](images/task_1_answer.png "task_1_answer")
 
 What is the IP address of the host that asked for the MAC address of 192.168.124.137?
 - 192.168.124.148
 
-![task_2_answer](task_2_answer.png "task_2_answer")
+![task_2_answer](images/task_2_answer.png "task_2_answer")
 
 What hostname (subdomain) appears in the first DNS query?
 - mirrors.rockylinux.org
 
-![task_3_answer](task_3_answer.png "task_3_answer")
+![task_3_answer](images/task_3_answer.png "task_3_answer")
 
 Advanced Filtering
 - there are many more ways to filter packets
@@ -182,15 +182,15 @@ Binary Operations
 
 - '&' (and) takes two bits and returns 0 unless both inputs are 1, as shown in the table below
 
-![binary_opertions_&_table](binary_opertions_&_table.png "binary_opertions_&_table")
+![binary_opertions_&_table](images/binary_opertions_&_table.png "binary_opertions_&_table")
 
 - '|' (or) takes two bits and returns 1 unless both inputs are 0, this is shown in the table below
 
-![binary_operations_or_table](binary_operations_or_table.png "binary_operations_or_table")
+![binary_operations_or_table](images/binary_operations_or_table.png "binary_operations_or_table")
 
 - '!' (not) takes one bit and inverts is, an input of 1 gives 0, and an input of 0 gives 1, as shown in the table below
 
-![binary_operations_not_table](binary_operations_not_table.png "binary_operations_not_table")
+![binary_operations_not_table](images/binary_operations_not_table.png "binary_operations_not_table")
 
 Header Bytes
 - the purpose of this section is to be able to filter packets based on the contents of a header byte
@@ -234,12 +234,12 @@ Header Bytes
 How many packets have only the TCP Reset (RST) flag set?
 - 57
 
-![task_4_answer](task_4_answer.png "task_4_answer")
+![task_4_answer](images/task_4_answer.png "task_4_answer")
 
 What is the IP address of the host that sent packets larger than 15000 bytes?
 - 185.117.80.53
 
-![task_5_answer](task_5_answer.png "task_5_answer")
+![task_5_answer](images/task_5_answer.png "task_5_answer")
 
 Displaying Packets
 - tcpdump is a rich program with many options to customise how the packets are printed and displayed
@@ -253,13 +253,13 @@ Displaying Packets
 - to demonstrate how the above options manipulate the output
 - we will first display the two captured packets without using any addiitonal args
 
-![tcpdump_no_args](tcpdump_no_args.png "tcpdump_no_args")
+![tcpdump_no_args](images/tcpdump_no_args.png "tcpdump_no_args")
 
 Brief Packet Information
 - if you prefer shorter output lines, you can opt for "quick" output with '-q' 
 - the following example shows the timestamp along with the source and destination IP addresses and source and destination port numbers
 
-![brief_packet_information](brief_packet_information.png "brief_packet_information")
+![brief_packet_information](images/brief_packet_information.png "brief_packet_information")
 
 Displaying Link-Level Header
 - if you are on an Ethernet or WiFi network and want to include the MAC addresses in tcpdump output
@@ -267,7 +267,7 @@ Displaying Link-Level Header
 - this is convenient when you are learning how specific protocols such as ARP and DHCP function
 - it can also help you track the source of any unusual packets on your network
 
-![displaying_link_level_header](displaying_link_level_header.png "displaying_link_level_header")
+![displaying_link_level_header](images/displaying_link_level_header.png "displaying_link_level_header")
 
 
 Displaying Packets as ASCII
@@ -275,7 +275,7 @@ Displaying Packets as ASCII
 - ASCII codes represent text
 - in other words you can expect '-A' to display all the bytes mapped to english letters numbers and symbols
 
-![displaying_packets_as_ascii](displaying_packets_as_ascii.png "displaying_packets_as_ascii")
+![displaying_packets_as_ascii](images/displaying_packets_as_ascii.png "displaying_packets_as_ascii")
 
 Displaying Packets in Hexadecimal Format
 - ASCII format works well when the packet contents are plain-text english
@@ -285,7 +285,7 @@ Displaying Packets in Hexadecimal Format
 - being 8 bits, any octet can be displayed as two hexadecimal digits (each hexadecimal digit represents 4 bits)
 - to display the packets in hexadecimal format we must add '-xx' as shown in the terminal below
 
-![displaying_packets_in_hexadecimal](displaying_packets_in_hexadecimal.png "displaying_packets_in_hexadecimal")
+![displaying_packets_in_hexadecimal](images/displaying_packets_in_hexadecimal.png "displaying_packets_in_hexadecimal")
 
 - adding '-xx' lets use see the packet octet by octet
 - in the example above we can closely inspect the IP and TCP headers in addition to the packet contents
@@ -294,14 +294,14 @@ Best of Both Worlds
 - if you would like to display the captured packets in hexadecimal and ASCII formats
 - tcpdump makes it easy with the '-X' option
 
-![ascii_and_hexadecimal](ascii_and_hexadecimal.png "ascii_and_hexadecimal")
+![ascii_and_hexadecimal](images/ascii_and_hexadecimal.png "ascii_and_hexadecimal")
 
 Summary and Examples
 - the table below provides a summary of the command line options that we covered
 
-![summary_and_examples_table_3](summary_and_examples_table_3.png "summary_and_examples_table_3")
+![summary_and_examples_table_3](images/summary_and_examples_table_3.png "summary_and_examples_table_3")
 
 What is the MAC address of the host that sent an ARP request?
 - 52:54:00:7c:d3:5b
 
-![task_6_answer](task_6_answer.png "task_6_answer")
+![task_6_answer](images/task_6_answer.png "task_6_answer")

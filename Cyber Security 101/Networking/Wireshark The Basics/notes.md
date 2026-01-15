@@ -31,13 +31,13 @@ GUI and Data
 - Wireshark GUI opens with a single all-in-one page which helps users investigate the traffic in multiple ways
 - at first glance five sections stand out:
 
-![wireshark_five_sections](wireshark_five_sections.png "wireshark_five_sections")
+![wireshark_five_sections](images/wireshark_five_sections.png "wireshark_five_sections")
 
 - the picture below shows the Wiresharks main window
 - the sections explained in the table above are highlighted
 - now open wireshark and follow along with the walkthrough
 
-![wireshark_five_sections_gui](wireshark_five_sections_gui.png "wireshark_five_sections_gui")
+![wireshark_five_sections_gui](images/wireshark_five_sections_gui.png "wireshark_five_sections_gui")
 
 Loading PCAP Files
 - the above picture shows Wiresharks empty interface
@@ -45,13 +45,13 @@ Loading PCAP Files
 - lets load that file and see Wiresharks detailed packet presentation
 - you can also use the file menu, dragging and dropping the file or double clicking on the file to load a pcap
 
-![wireshark_loaded_pcap_example](wireshark_loaded_pcap_example.png "wireshark_loaded_pcap_example")
+![wireshark_loaded_pcap_example](images/wireshark_loaded_pcap_example.png "wireshark_loaded_pcap_example")
 
 - now we can see the processed filename, detailed number of packets, and packet details
 - packet details are shown in three different panes
 - which allow us to discover them in different formats
 
-![packet_detail_panes_example](packet_detail_panes_example.png "packet_detail_panes_example")
+![packet_detail_panes_example](images/packet_detail_panes_example.png "packet_detail_panes_example")
 
 Colouring Packets
 - along with quick packet information
@@ -71,7 +71,7 @@ Colouring Packets
 
 - the default permanent colouring is shown below
 
-![wireshark_default_permanent_colouring](wireshark_default_permanent_colouring.png "wireshark_default_permanent_colouring")
+![wireshark_default_permanent_colouring](images/wireshark_default_permanent_colouring.png "wireshark_default_permanent_colouring")
 
 Traffic Sniffing
 - you can use the blue "shark button" to start network sniffing (capturing traffic)
@@ -79,7 +79,7 @@ Traffic Sniffing
 - the green button will restart the sniffing process
 - the status bar will also provide the usewd sniffing interface and the number of collected packets
 
-![traffic_sniffing_example](traffic_sniffing_example.png "traffic_sniffing_example")
+![traffic_sniffing_example](images/traffic_sniffing_example.png "traffic_sniffing_example")
 
 Merge PCAP Files
 - Wireshark can combine two pcap files into one single file
@@ -101,17 +101,17 @@ Use the "Exercise.pcapng" file to answer the questions.
 Read the "capture file comments". What is the flag?
 - TryHackMe_Wireshark_Demo
 
-![task_1_answer](task_1_answer.png "task_1_answer")
+![task_1_answer](images/task_1_answer.png "task_1_answer")
 
 What is the total number of packets?
 - 58620
 
-![task_2_answer](task_2_answer.png "task_2_answer")
+![task_2_answer](images/task_2_answer.png "task_2_answer")
 
 What is the SHA256 hash value of the capture file?
 - f446de335565fb0b0ee5e5a3266703c778b2f3dfad7efeaeccb2da5641a6d6eb
 
-![task_3_answer](task_3_answer.png "task_3_answer")
+![task_3_answer](images/task_3_answer.png "task_3_answer")
 
 Packet Dissection
 - also known as protocol dissection
@@ -128,15 +128,15 @@ Packet Details
 - packets consist of 5 to 7 layers based on the OSI model
 - we will go over all of them in a HTTP packet from a sample capture
 
-![packet_details_example](packet_details_example.png "packet_details_example")
+![packet_details_example](images/packet_details_example.png "packet_details_example")
 
 - each time you click a detail it will highlight the corresponding part in the packet bytes pane
 
-![packet_bytes_pane](packet_bytes_pane.png "packet_bytes_pane")
+![packet_bytes_pane](images/packet_bytes_pane.png "packet_bytes_pane")
 
 - let's have a closer look view of the details pane
 
-![details_pane_close_up](details_pane_close_up.png "details_pane_close_up")
+![details_pane_close_up](images/details_pane_close_up.png "details_pane_close_up")
 
 - we can see seven distinct layers to the packet:
 - 'frame/packet'
@@ -151,63 +151,63 @@ Packet Details
 
 - The Frame (Layer 1): This will show you what frame/packet you are looking at and details specific to the physical layer of the OSI model
 
-![frame_layer_1](frame_layer_1.png "frame_layer_1")
+![frame_layer_1](images/frame_layer_1.png "frame_layer_1")
 
 - Source [MAC] (Layer 2): This will show you the source and destination MAC addresses; from the data link layer of the OSI model
 
-![frame_layer_2](frame_layer_2.png "frame_layer_2")
+![frame_layer_2](images/frame_layer_2.png "frame_layer_2")
 
 - Source [IP] (layer 3): This will show you the source and destination IPv4 addresses; from the network layer of the OSI model
 
-![frame_layer_3](frame_layer_3.png "frame_layer_3")
+![frame_layer_3](images/frame_layer_3.png "frame_layer_3")
 
 - Protocol (Layer 4): This will show you details of the protocol used (UDP/TCP) and source and destination ports; from the transport layer of the OSI model
 
-![frame_layer_4](frame_layer_4.png "frame_layer_4")
+![frame_layer_4](images/frame_layer_4.png "frame_layer_4")
 
 - Protocol errors: this continuation of the 4th layer shows specific segments from TCP that needed to be reassembled
 
-![frame_layer_4_continuation](frame_layer_4_continuation.png "frame_layer_4_continuation")
+![frame_layer_4_continuation](images/frame_layer_4_continuation.png "frame_layer_4_continuation")
 
 - Application Protocol (Layer 5): This will show details specific to the protocol used such as HTTP, FTP and SMB; from the application layer of the OSI model
 
-![frame_layer_5](frame_layer_5.png "frame_layer_5")
+![frame_layer_5](images/frame_layer_5.png "frame_layer_5")
 
 - Application Data: the extension of the 5th layer can show the application-specific data
 
-![frame_layer_5_extension](frame_layer_5_extension.png "frame_layer_5_extension")
+![frame_layer_5_extension](images/frame_layer_5_extension.png "frame_layer_5_extension")
 
 Use the "Exercise.pcapng" file to answer the questions. View packet number 38. Which markup language is used under the HTTP protocol?
 - eXtensible Markup Language
 
-![task_4_answer](task_4_answer.png "task_4_answer")
+![task_4_answer](images/task_4_answer.png "task_4_answer")
 
 What is the arrival date of the packet? (Answer format: Month/Day/Year)
 - 05/13/2004
 
-![task_5_answer](task_5_answer.png "task_5_answer")
+![task_5_answer](images/task_5_answer.png "task_5_answer")
 
 What is the TTL value?
 - 47
 
-![task_6_answer](task_6_answer.png "task_6_answer")
+![task_6_answer](images/task_6_answer.png "task_6_answer")
 
 What is the TCP payload size?
 - 424
 
-![task_7_answer](task_7_answer.png "task_7_answer")
+![task_7_answer](images/task_7_answer.png "task_7_answer")
 
 What is the e-tag value?
 (For example: 82ecb-6321-9e904585)
 - 9a01a-4696-7e354b00
 
-![task_8_answer](task_8_answer.png "task_8_answer")
+![task_8_answer](images/task_8_answer.png "task_8_answer")
 
 Packet Numbers
 - Wireshark calculates the number of investigated packets and assigns a unique number for each packet
 - this helps the analysis process for big captures and makes it easy to go back to a specific point of an event
 
-![packet_numbers_example](packet_numbers_example.png "packet_numbers_example")
+![packet_numbers_example](images/packet_numbers_example.png "packet_numbers_example")
 
 Go to Packet
 - packet numbers do not only help to count the total number of packets or make it easier to find/investigate specific packets
@@ -215,7 +215,7 @@ Go to Packet
 - it also provides in-frame packet tracking and finds the next packet in the particular part of the conversation
 - you can use the "Go" menu and toolbar to view specific packets
 
-![go_to_packet_example](go_to_packet_example.png "go_to_packet_example")
+![go_to_packet_example](images/go_to_packet_example.png "go_to_packet_example")
 
 Find Packets
 - apart from packet number, Wireshark can find packets by packet content
@@ -234,7 +234,7 @@ Find Packets
 - and it is important to know the available information in each pane to find the event of interest
 - e.g. if you try to find the info available in the packet details pane and conduct a search in the packet list pane, Wireshark wont find it even if it exists
 
-![find_packet_example](find_packet_example.png "find_packet_example")
+![find_packet_example](images/find_packet_example.png "find_packet_example")
 
 Mark Packets
 - marking packets is another helpful functionality for analysts
@@ -246,7 +246,7 @@ Mark Packets
 - note that makred packet information is renewed every file session 
 - so marked packets will be lost after closing the capture file
 
-![mark_packet_example](mark_packet_example.png "mark_packet_example")
+![mark_packet_example](images/mark_packet_example.png "mark_packet_example")
 
 Packet Comments
 - similar to packet marking, commenting is another helpful feature for analysts 
@@ -254,7 +254,7 @@ Packet Comments
 - or remind and point out important/suspicious points for other later analysts
 - unlike packet marking the comments can stay within the capture file until the operator removes them
 
-![packet_comments_example](packet_comments_example.png "packet_comments_example")
+![packet_comments_example](images/packet_comments_example.png "packet_comments_example")
 
 Export Packets
 - capture files can contain thousands of packets in a single file
@@ -263,14 +263,14 @@ Export Packets
 - thus redundant info is not included in the analysis process
 - you can use the "File" menu to export packets
 
-![export_packets_example](export_packets_example.png "export_packets_example")
+![export_packets_example](images/export_packets_example.png "export_packets_example")
 
 Export Objects (Files)
 - Wireshark can extract files through the wire
 - for a security analyst it is vital to discover shared files and save them for further investigation
 - exporting objects are available only for selected protocols streams (DICOM, HTTP, IMF, SMB and TFTP)
 
-![export_object_example](export_object_example.png "export_object_example")
+![export_object_example](images/export_object_example.png "export_object_example")
 
 Time Display Format
 - Wireshark lists the packets as they are captured
@@ -279,9 +279,9 @@ Time Display Format
 - the common usage is using the UTC Time Display Format for a better view
 - you can use the "View -> Time Display Format" menu to change the time display format 
 
-![time_display_format_example](time_display_format_example.png "time_display_format_example")
+![time_display_format_example](images/time_display_format_example.png "time_display_format_example")
 
-![time_display_format_before_after_example](time_display_format_before_after_example.png "time_display_format_before_after_example")
+![time_display_format_before_after_example](images/time_display_format_before_after_example.png "time_display_format_before_after_example")
 
 Expert Info
 - Wireshark also detects specific states of protocols to help analysts easily spot possible anomalies and problems
@@ -289,47 +289,47 @@ Expert Info
 - expert info can provide a group of categories into three different severities 
 - details are shown in the table below:
 
-![severity_table](severity_table.png "severity_table")
+![severity_table](images/severity_table.png "severity_table")
 
 - frequently encountered information groups are listed in the table below
 - you can refer to Wiresharks documentation for more info on the expert info entries
 - https://www.wireshark.org/docs/
 
-![freq_encountered_info_groups_table](freq_encountered_info_groups_table.png "freq_encountered_info_groups_table")
+![freq_encountered_info_groups_table](images/freq_encountered_info_groups_table.png "freq_encountered_info_groups_table")
 
 - you can use the "lower left bottom section" in the status bar or "Analyse -> Exper Information" menu to view all available info entries via a dialog box
 - it will show the packet number, summary, group protocol and total occurence
 
-![expert_info_example](expert_info_example.png "expert_info_example")
+![expert_info_example](images/expert_info_example.png "expert_info_example")
 
 Use the "Exercise.pcapng" file to answer the questions. Search the "r4w" string in packet details. What is the name of artist 1?
 - r4w8173
 
-![task_9_answer](task_9_answer.png "task_9_answer")
+![task_9_answer](images/task_9_answer.png "task_9_answer")
 
 Go to packet 12 and read the packet comments. What is the answer?
 Note: use md5sum `<filename>` terminal command to get MD5 hash
 - 911cd574a42865a956ccde2d04495ebf
 
-![task_10_answer_1](task_10_answer_1.png "task_10_answer_1")
+![task_10_answer_1](images/task_10_answer_1.png "task_10_answer_1")
 
-![task_10_answer_2](task_10_answer_2.png "task_10_answer_2")
+![task_10_answer_2](images/task_10_answer_2.png "task_10_answer_2")
 
-![task_10_answer_3](task_10_answer_3.png "task_10_answer_3")
+![task_10_answer_3](images/task_10_answer_3.png "task_10_answer_3")
 
 There is a ".txt" file inside the capture file. Find the file and read it; what is the alien's name?
 - PACKETMASTER
 
-![task_11_answer_1](task_11_answer_1.png "task_11_answer_1")
+![task_11_answer_1](images/task_11_answer_1.png "task_11_answer_1")
 
-![task_11_answer_2](task_11_answer_2.png "task_11_answer_2")
+![task_11_answer_2](images/task_11_answer_2.png "task_11_answer_2")
 
 Look at the expert info section. What is the number of warnings?
 - 1636
 
-![task_12_answer_1](task_12_answer_1.png "task_12_answer_1")
+![task_12_answer_1](images/task_12_answer_1.png "task_12_answer_1")
 
-![task_12_answer_2](task_12_answer_2.png "task_12_answer_2")
+![task_12_answer_2](images/task_12_answer_2.png "task_12_answer_2")
 
 Packet Filtering
 - Wireshark has a powerful filter engine that helps analysts to narrow down the traffic and focus on the even of interest
@@ -353,7 +353,7 @@ Apply as Filter
 - once you apply the filter, Wireshark will generate the required filter query, appliy it, show the packets according to your choice and hide the unselected packets from the packet list pane
 - note that the number of total and displayed packets are always shown on the status bar
 
-![apply_as_filter_example](apply_as_filter_example.png "apply_as_filter_example")
+![apply_as_filter_example](images/apply_as_filter_example.png "apply_as_filter_example")
 
 Conversation Filter
 - when you use the "apply as filter" option you will filter only a single entity of the packet
@@ -362,7 +362,7 @@ Conversation Filter
 - in that case the "Conversation Filter" option helps you view only the related packets and hides the rest of the packets easily
 - you can use the "right-click menu" or "Analyse -> Conversation Filter" menu to filter conversations
 
-![conversation_filter_example](conversation_filter_example.png "conversation_filter_example")
+![conversation_filter_example](images/conversation_filter_example.png "conversation_filter_example")
 
 Colourise Conversation
 - this option is similar to the "Conversation Filter" with one difference
@@ -371,14 +371,14 @@ Colourise Conversation
 - you can use the "right-click menu" or "View -> Colourise Conversation" menu to colourise a linked packet in a single click
 - note that you can use the "View -> Colourise Conversation -> Reset Colourisation" menu to undo this operation
 
-![colourise_conversation_example](colourise_conversation_example.png "colourise_conversation_example")
+![colourise_conversation_example](images/colourise_conversation_example.png "colourise_conversation_example")
 
 Prepare as Filter
 - similar to "Apply as Filter" this option helps analysts create display filters using the "right-click" menu 
 - however unlike the previous one, this model doesnt apply the filters after the choice
 - it adds the required query to the pane and waits for the execution command (enter) or another chosen filtering option by using the ".. and/or.." from the "right-click menu"
 
-![prepare_as_filter_example](prepare_as_filter_example.png "prepare_as_filter_example")
+![prepare_as_filter_example](images/prepare_as_filter_example.png "prepare_as_filter_example")
 
 Apply as Column
 - by default the packet list pane provides info about each packet
@@ -387,7 +387,7 @@ Apply as Column
 - this function helps analysts examine the appearance of a specific value/field acrsoss the available packets in the capture file
 - you can enable/disable the columns shown in the packet list pane by clicking on top of the packet list pane
 
-![apply_as_column_example](apply_as_column_example.png "apply_as_column_example")
+![apply_as_column_example](images/apply_as_column_example.png "apply_as_column_example")
 
 Follow Stream
 - Wireshark displays everything in packet portion size
@@ -398,7 +398,7 @@ Follow Stream
 - you can use the "right-click menu" or "Analyse -> Follow TCP/UDP/HTTP Stream" menu to follow traffic streams
 - streams are shown in a seperate dialogue box; packets originating from the server are highlighted with BLUE, and those originating from the client are highlighted in RED
 
-![follow_stream_example](follow_stream_example.png "follow_stream_example")
+![follow_stream_example](images/follow_stream_example.png "follow_stream_example")
 
 - once you follow a stream Wireshark automatically creates and applies the required filter to view the specific stream
 - remember once a filter is applied, the number of viewed packets will change
@@ -409,25 +409,26 @@ Go to packet number 4. Right-click on the "Hypertext Transfer Protocol" and appl
 Now, look at the filter pane. What is the filter query?
 - http
 
-![task_13_answer_1](task_13_answer_1.png "task_13_answer_1")
+![task_13_answer_1](images/task_13_answer_1.png "task_13_answer_1")
 
-![task_13_answer_2](task_13_answer_2.png "task_13_answer_2")
+![task_13_answer_2](images/task_13_answer_2.png "task_13_answer_2")
 
 What is the number of displayed packets?
 - 1089
 
-![task_14_answer](task_14_answer.png "task_14_answer")
+![task_14_answer](images/task_14_answer.png "task_14_answer")
 
 Go to packet number 33790, follow the HTTP stream, and look carefully at the responses.
 Looking at the web server's response, what is the total number of artists?
 - 3
 
-![task_15_answer_1](task_15_answer_1.png "task_15_answer_1")
+![task_15_answer_1](images/task_15_answer_1.png "task_15_answer_1")
 
-![task_15_answer_2](task_15_answer_2.png "task_15_answer_2")
+![task_15_answer_2](images/task_15_answer_2.png "task_15_answer_2")
+
 - there was no results for artist=4
 
 What is the name of the second artist?
 - blad3
 
-![task_16_answer](task_16_answer.png "task_16_answer")
+![task_16_answer](images/task_16_answer.png "task_16_answer")

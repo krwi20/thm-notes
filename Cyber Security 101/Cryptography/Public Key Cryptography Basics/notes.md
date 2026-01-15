@@ -51,7 +51,7 @@ Analogy
 - the lock represents the servers public key
 - and the key represents the servers private key
 
-![asymmetric_encryption_analogy_table](asymmetric_encryption_analogy_table.png "asymmetric_encryption_analogy_table")
+![asymmetric_encryption_analogy_table](images/asymmetric_encryption_analogy_table.png "asymmetric_encryption_analogy_table")
 
 - consequently you would only need to use asymmetric encryption once so that it wont affect the speed
 - and then you can communicate privately using symmetric encryption
@@ -90,7 +90,7 @@ Numerical Example
 - lets revisit encryption, decryption and key usage in asymmetric encryption
 - the public key is known to all correspondents and is used for encryption while the private key is protected and used for decryption as shown in the figure below
 
-![asymmetric_encryption_example](asymmetric_encryption_example.png "asymmetric_encryption_example")
+![asymmetric_encryption_example](images/asymmetric_encryption_example.png "asymmetric_encryption_example")
 
 - in the cryptography basics room we explained the modulo operation and said it plays a significant role in cryptography
 - in the following simplified numerical example we see the RSA algorithm in action
@@ -132,7 +132,7 @@ working out:
 Knowing that p = 4391 and q = 6659. What is ϕ(n)?
 - 29228620
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 Diffie-Hellman Key Exchange
 - one of the challenges of using asymmetric encryption is sharing the secret key
@@ -172,7 +172,7 @@ Diffie-Hellman Key Exchange
 
 5. Alice and Bob can finally calculate the shared secret using the received public key and their own private key. Alice calculates B&a mod p = 26^13 mod 29 = 10 and Bob calculates A^b mod p = 19^15 mod 29 = 10. Both calculations yield the same result, g^ab mod p  = 10, the shared secret key
 
-![diffie_hellman_exchange_example](diffie_hellman_exchange_example.png "diffie_hellman_exchange_example")
+![diffie_hellman_exchange_example](images/diffie_hellman_exchange_example.png "diffie_hellman_exchange_example")
 
 - the chosen numbers are too small to provide any security and in real-life applications we would consider much bigger numbers
 
@@ -189,7 +189,7 @@ working out:
 - A = g^a mod p
 - A = 5^12 mod 29 = 7
 
-![answer_2](answer_2.png "answer_2")
+![answer_2](images/answer_2.png "answer_2")
 
 Consider p = 29, g = 5, b = 17. What is B?
 - 9
@@ -198,7 +198,7 @@ working out :
 - B = g^b mod p
 - B = 5^17 mod 29 = 9
 
-![answer_3](answer_3.png "answer_3")
+![answer_3](images/answer_3.png "answer_3")
 
 Knowing that p = 29, a = 12, and you have B from the second question, what is the key calculated by Bob? (key = Ba mod p)
 - 24
@@ -207,7 +207,7 @@ working out:
 - key = B^a mod p
 - key = 9^12 mod 29 = 24
 
-![answer_4](answer_4.png "answer_4")
+![answer_4](images/answer_4.png "answer_4")
 
 Knowing that p = 29, b = 17, and you have A from the first question, what is the key calculated by Alice? (key = Ab mod p)
 - 24
@@ -216,13 +216,13 @@ working out:
 - key = A^b mod p
 - key = 7^17 mod 29 = 24
 
-![answer_5](answer_5.png "answer_5")
+![answer_5](images/answer_5.png "answer_5")
 
 SSH
 Authenticating the Server
 - if you have used an SSH client before you would know the confirmation prompt in the terminal output below
 
-![shh_confirmation_prompt](shh_confirmation_prompt.png "shh_confirmation_prompt")
+![shh_confirmation_prompt](images/shh_confirmation_prompt.png "shh_confirmation_prompt")
 
 - in the above interaction...
 - the SSH client confirms whether we recognise the servers public key fingerprint
@@ -248,7 +248,7 @@ Authenticating the Client
 - 'ssh-keygen' is the program usually used to generate key pairs
 - it supports various algorithms as shown on its manual page below
 
-![ssh-keygen_manual_page](ssh-keygen_manual_page.png "ssh-keygen_manual_page")
+![ssh-keygen_manual_page](images/ssh-keygen_manual_page.png "ssh-keygen_manual_page")
 
 - the following is just for your information
 - at this stage we recommend that you recognise their names only
@@ -261,12 +261,12 @@ Authenticating the Client
 
 - lets generate a key pair with the default options
 
-![ssh-keygen_default_options](ssh-keygen_default_options.png "ssh-keygen_default_options")
+![ssh-keygen_default_options](images/ssh-keygen_default_options.png "ssh-keygen_default_options")
 
 - in the above example we didnt use a passphrase to show you the content of the private key
 - let's look at the generated public key 'id_ed25519.pub' and the generated private key 'id_ed25519'
 
-![ssh-keygen_default_options_public_and_private_keys](ssh-keygen_default_options_public_and_private_keys.png "ssh-keygen_default_options_public_and_private_keys")
+![ssh-keygen_default_options_public_and_private_keys](images/ssh-keygen_default_options_public_and_private_keys.png "ssh-keygen_default_options_public_and_private_keys")
 
 - note that the private key is shared above for demonstration purposes and was purged afterwards
 - sharing a private key would be the most insecure act anyone can commit against their security
@@ -305,7 +305,7 @@ Using SSH Keys to Get a "Better Shell"
 Check the SSH Private Key in ~/Public-Crypto-Basics/Task-5. What algorithm does the key use?
 - RSA
 
-![answer_6](answer_6.png "answer_6")
+![answer_6](images/answer_6.png "answer_6")
 
 Digital Signatures and Certificates
 - in the "analogue" world you are asked to sign a piece of paper now and then
@@ -326,7 +326,7 @@ What's a Digital Signature?
 - if someone wants to verify this signature they would decrypt it with your public key and check if the file matches
 - this process is shown in the image below
 
-![simple_digital_signature_example](simple_digital_signature_example.png "simple_digital_signature_example")
+![simple_digital_signature_example](images/simple_digital_signature_example.png "simple_digital_signature_example")
 
 - some articles use terms such as electronic signature and digital signature interchangeably
 - they refer to pasting an image of a signature on top of a document
@@ -377,7 +377,7 @@ PGP and GPG
 - besides selecting the crypotgraphic algorithm we need to choose an expiry data for the generated key
 - finally we provided some information about us: our name, emnail addr, and a comment usually about the purpose of the key#
 
-![gpg_gen_example](gpg_gen_example.png "gpg_gen_example")
+![gpg_gen_example](images/gpg_gen_example.png "gpg_gen_example")
 
 - you may need to use GPG to decrypt files in CTFs
 - with PGP/GPG private keys can be protected with a passphrase in a similar way that we protect SSH private keys
@@ -400,7 +400,7 @@ Practical Example
 Use GPG to decrypt the message in ~/Public-Crypto-Basics/Task-7. What secret word does the message hold?
 - Pineapple
 
-![answer_7](answer_7.png "answer_7")
+![answer_7](images/answer_7.png "answer_7")
 
 Conclusion
 - we have defined cryptography as the science of securing communication in the presence of adversaries

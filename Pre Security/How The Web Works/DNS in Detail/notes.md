@@ -7,7 +7,7 @@ What does DNS stand for?
 
 Domain Hierarchy
 
-![domain_hierarchy](domain_hierarchy.png "domain_hierarchy")
+![domain_hierarchy](images/domain_hierarchy.png "domain_hierarchy")
 
 TLD (top-level domain)
 - most righthand part of a domain name
@@ -84,7 +84,7 @@ What type of record handles IPv6 addresses?
 
 Making a Request
 
-![request_example](request_example.png "request_example")
+![request_example](images/request_example.png "request_example")
 
 What happens when you make a DNS request?
 1. computer first checks local cache to see if you've previously looked up the address recently

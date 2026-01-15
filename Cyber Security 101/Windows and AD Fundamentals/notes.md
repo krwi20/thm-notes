@@ -142,25 +142,25 @@ Managing Users in AD
 - as there have been some changes that have happened to the business
 - we must follow this organisational chart and make changes to the AD to match it
 
-![organisational chart](organisational_chart.png "organisational chart")
+![organisational chart](images/organisational_chart.png "organisational chart")
 
 Deleting extra OUs and users
 - the first thing we should notice is that there is an additional department OU in the current AD config that doesn't appear in the chart
 - we are told it has been closed to budget cuts and should be removed from the domain
 - if we try to right-click delete the OU we get this error
 
-![AD_Delete_Error](AD_Delete_Error.png "AD_Delete_Error")
+![AD_Delete_Error](images/AD_Delete_Error.png "AD_Delete_Error")
 
 - by default OUs are protected against accidental deletion
 - to delete the OU we need to enable the Advanced Features in the view menu!
 
-![Adv_Features](Adv_Features.png "Adv_Features")
+![Adv_Features](images/Adv_Features.png "Adv_Features")
 
 - this will show some additional containers and enable us to disable the accidental deletion protection
 - right click the OU and go to properties
 - we will find a checkbox in the Object tab to disable the protection
 
-![OU_Properties](OU_Properties.png "OU_Properties")
+![OU_Properties](images/OU_Properties.png "OU_Properties")
 
 - be sure to uncheck the box and try deleting the OU again
 - we will be prompted to confirm that we want to delete the OU
@@ -179,17 +179,17 @@ Delegeation
 
 - to delegate control over an OU you can right click it and select Delegate Control
 
-![Delegate_Control](Delegate_Control.png "Delegate_Control")
+![Delegate_Control](images/Delegate_Control.png "Delegate_Control")
 
 - this should open a new window where first we will be asked for the users to whom you want to delegate control
 
 ** note ** to avoid mistyping the user's name, write (in this case) "phillip" and click the check names button -> windows will autocomplete the user
 
-![delegate_autocomplete](delegate_autocomplete.png "delegate_autocomplete")
+![delegate_autocomplete](images/delegate_autocomplete.png "delegate_autocomplete")
 
 - click OK and on the next step select the following:
 
-![tasks_to_delegate](tasks_to_delegate.png "tasks_to_delegate")
+![tasks_to_delegate](images/tasks_to_delegate.png "tasks_to_delegate")
 
 - click next a couple of times and now Phillip should be able to reset passwords for any user in the sales dept
 - while youd probably want to repeat these steps to delegate the passwords resets of Marketing and Management depts we will leave it here for this task
@@ -203,7 +203,7 @@ Delegeation
 - xfreerdp [ip]
 - then entered phillip's credentials in the session
 
-![RDP_Session](RDP_Session.png "RDP_Session")
+![RDP_Session](images/RDP_Session.png "RDP_Session")
 
 - while you may be tempted to go to Active Directory Users and COmputers to try and test Phillip's new powers
 - he doesn't really have the privileges to open it
@@ -213,19 +213,19 @@ Delegeation
 - entere the new password
 - VERBOSE: Peforming the operation "Set-ADAccountPassword" on target "CN=Sophie,OU=Sales,OU=THM,DC=thm,DC=local".
 
-![Reset_password_console](Reset_password_console.png "Reset_password_console")
+![Reset_password_console](images/Reset_password_console.png "Reset_password_console")
 
 - since we wouldn't want Sophie to keep on using a password we know, we can also force a password reset at the next logon with the following command
 - Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 - VERBOSE: Performing the operation "Set" on target "CN=Sophie,OU=Sales,OU=THM,DC=thm,DC=local".
 
-![Set_new_pass_at_logon](Set_new_pass_at_logon.png "Set_new_pass_at_logon")
+![Set_new_pass_at_logon](images/Set_new_pass_at_logon.png "Set_new_pass_at_logon")
 
 - log in to sophies account with new password and retrieve the flag from desktop
 
 ** note ** when connecting via RDP use THM\sophie as the username to specify we want to log in using the user sophie on the THM domain
 
-![thm_flag](thm_flag.png "thm_flag")
+![thm_flag](images/thm_flag.png "thm_flag")
 
 What was the flag found on Sophie's desktop?
 - THM{thanks_for_contacting_support}
@@ -237,7 +237,7 @@ Managing Computers in AD
 - by default all machines that join a domain except for the DCs will be put in the container called "Computers" 
 - if we check our DC we will see some devices are already there
 
-![computer_container](computer_container.png "computer_container")
+![computer_container](images/computer_container.png "computer_container")
 
 - we can see some servers, some laptops and some PCs corresponding to the users in our network
 - having all our devices there is not the best idea -> very likely that you want different policies for your servers and the machines that regular users use on a daily basis
@@ -266,18 +266,18 @@ Managing Computers in AD
 - let's create 2 seperate OUs for Workstations and Servers (Domain Controllers are already in an OU created by windows)
 - we will be creating them directly under thm.local domain container
 
-![workstations_servers](workstations_servers.png "workstations_servers")
+![workstations_servers](images/workstations_servers.png "workstations_servers")
 
 - as you can see we added Workstations and Servers under thm.local
 - now we move the personal computers and laptops to the workstations OU 
 - and move the servers to the servers OU from the Computers container
 - doing so will allow us to configure policies for each OU later
 
-![move_servers](move_servers.png "move_servers")
+![move_servers](images/move_servers.png "move_servers")
 
 - in the above image you can see we moved the SVR (servers) from Computers container to the Servers OU
 
-![move_workstations](move_workstations.png "move_workstations")
+![move_workstations](images/move_workstations.png "move_workstations")
 
 - in the above image you can see we moved the workstations from the Computers container to the workstations OU
 
@@ -297,7 +297,7 @@ Group Policies
 - GPOs can contain policies aimed at either users or computers, allowing you to set a baseline on specific machines and identities
 - to configure GPOs, you can use the Group Policy Management tool from the start menu
 
-![group_policy_management_tool](group_policy_management_tool.png "group_policy_management_tool")
+![group_policy_management_tool](images/group_policy_management_tool.png "group_policy_management_tool")
 
 - the first thing you will see when opening it is your complete OU hierarchy as defined before
 - to configure group policies..
@@ -305,7 +305,7 @@ Group Policies
 - then link it to the OU where you want the policies to apply
 - example...
 
-![GPO_Example](GPO_Example.png "GPO_Example")
+![GPO_Example](images/GPO_Example.png "GPO_Example")
 
 - in the image above we can see that 3 GPOs have been created
 - from those the Default Domain Policy and the RDP Policy are linked to thm.local as a whole
@@ -318,7 +318,7 @@ Group Policies
 - which is where the GPO is linked in the AD
 - for the current policy we can see that it has only been linked to the thm.local domain
 
-![defaul_domain_policy_scope](defaul_domain_policy_scope.png "defaul_domain_policy_scope")
+![defaul_domain_policy_scope](images/defaul_domain_policy_scope.png "defaul_domain_policy_scope")
 
 - you can also apply Security Filtering to GPOs so that they are only applied to specific users/computers under an OU
 - by default they will apply to the Authenticated Users group, which includes all users/PCs
@@ -327,30 +327,30 @@ Group Policies
 - as stated before -> each GPO has configs that apply to computers only and configs that apply to users only
 - in this case the Default Domain Policy only contains computer configs
 
-![defaul_domain_policy_settings](defaul_domain_policy_settings.png "defaul_domain_policy_settings")
+![defaul_domain_policy_settings](images/defaul_domain_policy_settings.png "defaul_domain_policy_settings")
 
 - in this case the Default Domain Policy indicates really basic configs that should apply to most domains including password and account lockout policies
 
-![default_domain_policy_policies](default_domain_policy_policies.png "default_domain_policy_policies")
+![default_domain_policy_policies](images/default_domain_policy_policies.png "default_domain_policy_policies")
 
 - since this gpo applies to the whole domain any change to it would affect all computers
 - let's change the minimum password length policy to require users to have at least 10 characters in their passwords
 - rightclick the GPO and select edit
 
-![gpo_edit](gpo_edit.png "gpo_edit")
+![gpo_edit](images/gpo_edit.png "gpo_edit")
 
 - this will open up a new window where we can nav and edit all of the available configs
 - to change the min password length...
 - go to Computer Configurations -> Policies -> Windows Setting -> Security Settings -> Account Policies -> Password Policy 
 - change the required policy value
 
-![password_policy_example](password_policy_example.png "password_policy_example")
+![password_policy_example](images/password_policy_example.png "password_policy_example")
 
 - as you can see plenty of policies can be established in a GPO
 - there are a lot of different policies
 - you can double click on a policy and read the explain tab for more info
 
-![policy_explain](policy_explain.png "policy_explain")
+![policy_explain](images/policy_explain.png "policy_explain")
 
 GPO Distribution
 - distributed to the network via a network share called SYSVOL which is stored in the DC
@@ -375,14 +375,14 @@ Restrict Access to Control Panel
 - lets create a new GPO called Restrict Control Panel Access
 - since we want this GPO to apply to specific users we will look under User Configuration for the following policy
 
-![restrict_control_panel_access](restrict_control_panel_access.png "restrict_control_panel_access")
+![restrict_control_panel_access](images/restrict_control_panel_access.png "restrict_control_panel_access")
 
 - notice we have enabled the Prohibit Access to Control Panel and PC Settings policy
 
 - once the GPO is configured we will need to link to all of the OUs corresponding user's who should not have access to the Control Panel of their PCs
 - in this case we will link Marketing, Management and Sales OUs by dragging the GPO to each of them
 
-![gpo_link](gpo_link.png "gpo_link")
+![gpo_link](images/gpo_link.png "gpo_link")
 
 Auto Lock Screen GPO
 - for the first GPO, regarding screen locking for workstations and servers, we could directly apply it over the Workstations, Servers and Domain Controllers OUs we created previously
@@ -395,12 +395,12 @@ Auto Lock Screen GPO
 - let's create a new GPO call it Auto Lock Screen and edit it
 - the policy to achieve what we want is located in this route:
 
-![auto_lock_screen_policy](auto_lock_screen_policy.png "auto_lock_screen_policy")
+![auto_lock_screen_policy](images/auto_lock_screen_policy.png "auto_lock_screen_policy")
 
 - we will set the inactivity limit to 5 min so that computers get locked automatically if any user leaves their session open
 - after closing the GPO editor we will link the GPO to the root domain by dragging the GPO to it
 
-![auto_lock_screen_link](auto_lock_screen_link.png "auto_lock_screen_link")
+![auto_lock_screen_link](images/auto_lock_screen_link.png "auto_lock_screen_link")
 
 - once the GPOs have been applied to the correct OUs we can log in as any users in either Marketing, Sales or Management for verification
 - in the VM lets connect via RDPP using marks credentials
@@ -410,7 +410,7 @@ Auto Lock Screen GPO
 - if we try to open the Control Panel we should get a message indiacting this operation is denied by the admin
 - can also wait 5 min to see if the screen is auto locked
 
-![control_panel_vm_test](control_panel_vm_test.png "control_panel_vm_test")
+![control_panel_vm_test](images/control_panel_vm_test.png "control_panel_vm_test")
 
 What is the name of the network share used to distribute GPOs to domain machines?
 - SYSVOL
@@ -443,24 +443,24 @@ Along with the TGT, a Session Key is given to the user, which they will need to 
 Notice the TGT is encrypted using the krbtgt account's password hash, and therefore the user cant access its content
 It is essential to know that the encrypted TGT includes a copy of the Session Key as part of its contents and the KDC has no need to store the Session Key as it can recover a copy by decrypting the TGT if needed
 
-![kerberos_example](kerberos_example.png "kerberos_example")
+![kerberos_example](images/kerberos_example.png "kerberos_example")
 
 1. When a user wants to connect to a service on the network like a share, website, or database, they will use their TGT to ask the KDC for a Ticket Granting Service (TGS). TGS are tickets that allow connection only to the specified service they were created for. to request a TGS the user will send their username and a timestamp encrypted using the Session Key, along with the TGT and a Service Principal Name (SPN) which indicates the service and server name we intend to access.
 
 as a result the KDC will send us a TGS along with a Service Session Key, which we will need to auth the service we want to access. The TGS is encrypted using a key derived from the Service Owner Hash. the Service Owner is the user or machine account that the service runs under. the TGS contains a copy of the Service Session Key on its encrypted contents so that the Service Owner can access it by decrypting the TGS.
 
-![kerberos_example_2](kerberos_example_2.png "kerberos_example_2")
+![kerberos_example_2](images/kerberos_example_2.png "kerberos_example_2")
 
 1. the TGS can then be sent to the desired service to authenticate and establish a connection. the service will use its configured account's password hash to decrypt the TGS and validate the Service Session Key.
 
-![kerberos_example_3](kerberos_example_3.png "kerberos_example_3")
+![kerberos_example_3](images/kerberos_example_3.png "kerberos_example_3")
 
 NetNTLM Authentication
 
 - works using a challenge-response mechanism
 - the entire process is as follows:
 
-![netntlm_auth](netntlm_auth.png "netntlm_auth")
+![netntlm_auth](images/netntlm_auth.png "netntlm_auth")
 
 1. the client sends an auth request to the server they want to access
 2. the server generates a random number and sends it as a challenge to the client
@@ -485,7 +485,7 @@ When using NetNTLM, is a user's password transmitted over the network at any poi
 Trees, Forests and Trusts
 - so far we have discussed how to manage a single domain, the role of a Domain Controller and how it joins computers, servers and users
 
-![dc](dc.png "dc")
+![dc](images/dc.png "dc")
 
 - as companies grow so do their networks
 - having a single domain for a company is a good enough start
@@ -505,7 +505,7 @@ Trees
 - if our thm.local domain was split into 2 subdomains for UK and US branches
 - you could build a tree with a root domain of thm.local and 2 subdomains called uk.thm.local and us.thm.local each with its AD, computers and users
 
-![tree_example](tree_example.png "tree_example")
+![tree_example](images/tree_example.png "tree_example")
 
 - this partitioned structre gives us better control over who can access what in the domain
 - the IT people from the UK will have their own DC that manages the UK resources only
@@ -525,7 +525,7 @@ Forests
 - when both companies merge, you will probably have different domain trees for each company, each managed by its own IT dept
 - the union of several trees with different namespaces into the same network is known as a forest
 
-![forest_example](forest_example.png "forest_example")
+![forest_example](images/forest_example.png "forest_example")
 
 Trust Relationships
 - having multiple domains organised in tress and forest allows you to have a nice compartmentalised network in terms of management and resources
@@ -537,7 +537,7 @@ Trust Relationships
 - the simplest trust relationship that can be established is a one-way trust relationship
 - in a one-way trust if Domain AAA trusts Domain BBB this means that a user on BBB can be authorised to access resources on AAA
 
-![one_way_trust](one_way_trust.png "one_way_trust")
+![one_way_trust](images/one_way_trust.png "one_way_trust")
 
 - the direction of the one-way trust relationship is contrary to that of the access direction
 

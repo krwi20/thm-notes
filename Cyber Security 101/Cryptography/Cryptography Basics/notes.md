@@ -59,12 +59,12 @@ Plaintext to Ciphertext
 - the plaintext is passed through the encryption function along with a proper key; the encryption function returns a ciphertext
 - the encryption function is part of the cipher; a cipher is an algorithm to convert a plaintext into a ciphertext and vice versa
 
-![plaintext_to_ciphertext_example](plaintext_to_ciphertext_example.png "plaintext_to_ciphertext_example")
+![plaintext_to_ciphertext_example](images/plaintext_to_ciphertext_example.png "plaintext_to_ciphertext_example")
 
 - to recover the plaintext we must pass the ciphertext along with the proper key via the decryption function, which would give us the original plaintext
 - this is shown in the illustration below
 
-![ciphertext_to_plaintext_example](ciphertext_to_plaintext_example.png "ciphertext_to_plaintext_example")
+![ciphertext_to_plaintext_example](images/ciphertext_to_plaintext_example.png "ciphertext_to_plaintext_example")
 
 - we have just introduced several new terms and we need to learn them to understand any text about cryptography
 - the terms are listed below:
@@ -96,14 +96,14 @@ Historical Ciphers
 - as you noticed once we reach Z we start all over, as shown in the figure below
 - consequently we get the ciphertext of WUBKDFNPH
 
-![caesar_cipher_encryption_example](caesar_cipher_encryption_example.png "caesar_cipher_encryption_example")
+![caesar_cipher_encryption_example](images/caesar_cipher_encryption_example.png "caesar_cipher_encryption_example")
 
 - to decrypt we need the following information
 - ciphertext: WUBKDFNPH
 - Key: 3
 - Cipher: Caesar Cipher
 
-![caesar_cipher_decryption_example](caesar_cipher_decryption_example.png "caesar_cipher_decryption_example")
+![caesar_cipher_decryption_example](images/caesar_cipher_decryption_example.png "caesar_cipher_decryption_example")
 
 - for encryption we shift to the right by three
 - for decryption we shift to the left by three and recover the original plaintext as illustrated by the img aboe
@@ -114,7 +114,7 @@ Historical Ciphers
 - in this case we recovered the original message with key = 5
 - consequently by todays standards where the cipher is publicly known, Caesar Cipher is consideered insecure
 
-![caesar_cipher_bruteforce_example](caesar_cipher_bruteforce_example.png "caesar_cipher_bruteforce_example")
+![caesar_cipher_bruteforce_example](images/caesar_cipher_bruteforce_example.png "caesar_cipher_bruteforce_example")
 
 - you would come across many more historical ciphers in movies and cryptography books
 - examples include:
@@ -129,7 +129,7 @@ Historical Ciphers
 Knowing that XRPCTCRGNEI was encrypted using Caesar Cipher, what is the original plaintext?
 - ICANENCRYPT
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 Types of Encryption
 - the two main categories of encryption are symmetric and asymmetric
@@ -141,7 +141,7 @@ Symmetric Encryption
 - maintaining the secrecy of the key can be a significant challenge, especially if there are many recipients 
 - the problem becomes more severe in the presence of a powerful adversary; consider the threat of industrial espionage for instance
 
-![symmetric_encryption_example](symmetric_encryption_example.png "symmetric_encryption_example")
+![symmetric_encryption_example](images/symmetric_encryption_example.png "symmetric_encryption_example")
 
 - consider the simple case where you created a password-protected document to share it with your colleague
 - you can easily email the encrypted document to your colleague but most likely you cannot email them the password
@@ -161,7 +161,7 @@ Asymmetric Encryption
 - asymmetric encryption uses a pair of keys, one to encrypt and the other to decrypt as shown in the illustration below
 - to protect confidentiality asymmetric encryption/cryptography encrypts the data using the public key; hence it is also called public key cryptography
 
-![asymmetric_encryption_example](asymmetric_encryption_example.png "asymmetric_encryption_example")
+![asymmetric_encryption_example](images/asymmetric_encryption_example.png "asymmetric_encryption_example")
 
 - examples are RSA, Diffie-Hellman, and Elliptic Curve cryptography (ECC)
 - the two keys involved in the process are referred to as a public key and a private key
@@ -205,7 +205,7 @@ XOR Operation
 - in binary XOR compares two bits and returns 1 if the bits are different and 0 if they are the same as shown in the truth table below
 - this operation is often represented by the simple ⊕ or ^
 
-![XOR_truth_table](XOR_truth_table.png "XOR_truth_table")
+![XOR_truth_table](images/XOR_truth_table.png "XOR_truth_table")
 
 - if this is the first time you work with a truth table, it is a table that shows all possible outcomes
 - the XOR truth table above states all four cases:
@@ -283,12 +283,12 @@ working out:
 What’s 118613842%9091?
 - 3565
 
-![answer_2](answer_2.png "answer_2")
+![answer_2](images/answer_2.png "answer_2")
 
 What’s 60%12?
 - 0
 
-![answer_3](answer_3.png "answer_3")
+![answer_3](images/answer_3.png "answer_3")
 
 Summary
 - in this room we learned about the importance of cryptography and some of the problems that it solves

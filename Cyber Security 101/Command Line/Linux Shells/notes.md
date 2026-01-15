@@ -40,25 +40,25 @@ How to Interact With a Shell?
 - by default when you open a shell in most linux distros you will be in your home directory
 - to see your current working directory you can execute 'pwd' -> print working directory
 
-![pwd_example](pwd_example.png "pwd_example")
+![pwd_example](images/pwd_example.png "pwd_example")
 
 - in the results of the above command you can see that your current working directory is /home/ubuntu
 
 - however you can change your directory as well
 - to do that you can use 'cd' -> change directory as shown below
 
-![cd_example](cd_example.png "cd_example")
+![cd_example](images/cd_example.png "cd_example")
 
 - while using the GUI of an os you can see the contents of a directory on the screen
 - however when using the shell to see the contents of a directory you must enter the following command
 - 'ls' 
 
-![ls_example](ls_example.png "ls_example")
+![ls_example](images/ls_example.png "ls_example")
 
 - if you want to read the contents of a file, you can type the following command in your shell
 - 'cat filename.txt' 
 
-![cat_example](cat_example.png "cat_example")
+![cat_example](images/cat_example.png "cat_example")
 
 - the grep command is very popular command amongs linux users
 - this powerful command can search for any word or pattern inside a file
@@ -70,7 +70,7 @@ How to Interact With a Shell?
 - the output displays the specific line of that text file containing this word
 - 'grep THM dictionary.txt'
 
-![grep_example](grep_example.png "grep_example")
+![grep_example](images/grep_example.png "grep_example")
 
 What is the default shell in most Linux distributions?
 - bash
@@ -88,18 +88,18 @@ Types of Linux Shells
 - to see which shell you are using type the following command
 - 'echo $SHELL'
 
-![echo_$shell_example](echo_$shell_example.png "echo_$shell_example")
+![echo_$shell_example](images/echo_$shell_example.png "echo_$shell_example")
 
 - you can also list down the available shells in your Linux os
 - the file /etc/shells contains all the installed shells on a Linux system
 - you can list down the available shells in your Linux OS by typing 'cat /etc/shells'
 
-![cat_etc_shells_example](cat_etc_shells_example.png "cat_etc_shells_example")
+![cat_etc_shells_example](images/cat_etc_shells_example.png "cat_etc_shells_example")
 
 - to switch between these shells you can type the shell name that is present on your os and it will open for you
 - 'zsh'
 
-![zsh_example](zsh_example.png "zsh_example")
+![zsh_example](images/zsh_example.png "zsh_example")
 
 - if you want to permanently change your default shell
 - you can use the command 'chsh -s /usr/bin/zsh' 
@@ -146,7 +146,7 @@ Z Shell
 - it offers extensive customisation that may make it slower than other shells
 - it also provides tab completion, command history functionality and several other features
 
-![shell_comparison_table](shell_comparison_table.png "shell_comparison_table")
+![shell_comparison_table](images/shell_comparison_table.png "shell_comparison_table")
 
 - selecting the best linux shell depends on your usage and its features
 - the shells discussed in this task are some of the many different shells available in Linux
@@ -183,7 +183,7 @@ Shell Scripting and Components
 - following terminal shows the script file creation
 - 'nano first_script.sh'
 
-![script_file_creation_example](script_file_creation_example.png "script_file_creation_example")
+![script_file_creation_example](images/script_file_creation_example.png "script_file_creation_example")
 
 - every script should start from shebang
 - shebang is a combination of some characters that are added at the beginning of the script
@@ -191,7 +191,7 @@ Shell Scripting and Components
 - as we are writing our script in bash lets define it as the interpreter in the shebang
 - '#!/bin/bash'
 
-![bash_interpreter_example](bash_interpreter_example.png "bash_interpreter_example")
+![bash_interpreter_example](images/bash_interpreter_example.png "bash_interpreter_example")
 
 - we are all set to write our first script now
 - there are some fundamental building blocks of a script that together make an efficient script
@@ -209,7 +209,7 @@ Variables
 - and 'name' is the variable in which the input would be stored
 - the last line uses 'echo' to display the welcome to the user, along with its name stored in the variable
 
-![first_script_example](first_script_example.png "first_script_example")
+![first_script_example](images/first_script_example.png "first_script_example")
 
 - now save the script by pressing 'CTRL + X'
 - confirm by pressing 'Y' and then enter
@@ -217,7 +217,7 @@ Variables
 - to give these permissions to the script we can type the following command in our terminal
 - 'chmod +x first_script.sh'
 
-![first_script_permissions_example](first_script_permissions_example.png "first_script_permissions_example")
+![first_script_permissions_example](images/first_script_permissions_example.png "first_script_permissions_example")
 
 - now that the script has execution permissions use './' before the script name to execute it
 - we use './' before the script to run rather than typing the script name directly
@@ -227,7 +227,7 @@ Variables
 - and will not find the defined script in any of those directories and generate an error
 - the below terminal shows the script in which we utilised the variables
 
-![script_one_output_example](script_one_output_example.png "script_one_output_example")
+![script_one_output_example](images/script_one_output_example.png "script_one_output_example")
 
 Loops
 - loop as the name suggests is something that is repeating
@@ -240,7 +240,7 @@ Loops
 - first create a new file name 'loop_script.sh' then enter the code below
 - save with 'CTRL + X' then confirm with 'y' then press enter
 
-![loop_script_example](loop_script_example.png "loop_script_example")
+![loop_script_example](images/loop_script_example.png "loop_script_example")
 
 - the first line has the variable 'i' that will iterate from 1 to 10 and execute the below code every time
 - 'do' indicates the start of the loop code 
@@ -253,7 +253,7 @@ Loops
 - 'chmod +x loop_script.sh'
 - './loop_script.sh'
 
-![loop_script_output_example](loop_script_output_example.png "loop_script_output_example")
+![loop_script_output_example](images/loop_script_output_example.png "loop_script_output_example")
 
 - the output of the above terminal is cut to '3' numbers only for demonstartion
 - however when executed according to the script's logic, it would display the numbers from 1 to 10
@@ -271,7 +271,7 @@ Conditional Statements
 - first create a new file named 'conditional_script.sh' then enter the code below
 - save by pressing 'CTRL + X' then confirm with 'y' and press enter
 
-![conditional_script_example](conditional_script_example.png "conditional_script_example")
+![conditional_script_example](images/conditional_script_example.png "conditional_script_example")
 
 - the above script takes the user's name as input and stores it into a variable
 - the conditional statement starts with if and comapres the value of that variable with the string Stewart
@@ -280,11 +280,11 @@ Conditional Statements
 
 - following is the terminal showing the script execution when the user name matches the authorised one defined in the script
 
-![conditional_script_output_1_example](conditional_script_output_1_example.png "conditional_script_output_1_example")
+![conditional_script_output_1_example](images/conditional_script_output_1_example.png "conditional_script_output_1_example")
 
 - however the following terminal shows the script execution when the user name does not match the authorised one defined in the script
 
-![conditional_script_output_2_example](conditional_script_output_2_example.png "conditional_script_output_2_example")
+![conditional_script_output_2_example](images/conditional_script_output_2_example.png "conditional_script_output_2_example")
 
 Comments
 - sometimes the code can be very lengthy
@@ -296,7 +296,7 @@ Comments
 - open the 'conditional_script.sh' with 'nano' and add these comments starting with a '#' sign
 - save your file by 'CTRL + X' then confirm with 'y' and press enter
 
-![comment_example](comment_example.png "comment_example")
+![comment_example](images/comment_example.png "comment_example")
 
 - see how easy a script looks with comments
 - comments dont affect the working of any scripts
@@ -331,11 +331,11 @@ Requirement
 
 Script
 
-![locker_script_example](locker_script_example.png "locker_script_example")
+![locker_script_example](images/locker_script_example.png "locker_script_example")
 
 Script Execution
 
-![locker_script_execution_example](locker_script_execution_example.png "locker_script_execution_example")
+![locker_script_execution_example](images/locker_script_execution_example.png "locker_script_execution_example")
 
 What would be the correct PIN to authenticate in the locker script?
 - 7385
@@ -346,7 +346,7 @@ Practical Exercice
 
 ** note **  some changes are required inside thee script before you can execute it, when you open the machine, you will be able to gain the session as a normal user, however we recommend you to become the root user in order to search for the flag in all the files of the given director. to become one you only need to type the following command and enter the password of the user 
 
-![become_root_user_example](become_root_user_example.png "become_root_user_example")
+![become_root_user_example](images/become_root_user_example.png "become_root_user_example")
 
 - you can make the changes in the script file by keeping in view the following details
 - Flag: thm-flag01-script
@@ -354,16 +354,16 @@ Practical Exercice
 
 ** hint ** look for empty double quotes " " inside the script file and fill them, make sure not to leave any space between them
 
-![task_6_script](task_6_script.png "task_6_script")
+![task_6_script](images/task_6_script.png "task_6_script")
 
 - then run it ./flag_hunt.sh
 
-![task_6_output](task_6_output.png "task_6_output")
+![task_6_output](images/task_6_output.png "task_6_output")
 
 - check the authentication.log file 
 - cat /var/log/authentication.log
 
-![task_6_file_content](task_6_file_content.png "task_6_file_content")
+![task_6_file_content](images/task_6_file_content.png "task_6_file_content")
 
 Which file has the keyword?
 - authentication.log

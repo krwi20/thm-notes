@@ -30,7 +30,7 @@ view-room - path
 ?id=1 - query string
 #task3 - fragment
 
-![url_example](url_example.png "url_example")
+![url_example](images/url_example.png "url_example")
 
 scheme - instructs on what protocol to use for accessing the resource such as HTTP, HTTPS, FTP
 user - some services require auth to login you can put a username and password into the url to log in
@@ -46,7 +46,7 @@ Making a request
 - the other data is sent in what is called headers
 - headers contain extyra info to give to the web server you are communicating with
 
-![making_a_request_example](making_a_request_example.png "making_a_request_example")
+![making_a_request_example](images/making_a_request_example.png "making_a_request_example")
 
 example request
 GET / HTTP/1.1
@@ -62,7 +62,7 @@ Line 5 - HTTP requests always end with a blank line to inform the web server tha
 
 example response
 
-![example_response](example_response.png "example_response")
+![example_response](images/example_response.png "example_response")
 
 Line 1 - HTTP 1.1 is the version of the HTTP protocol the server is using and then followed by the HTTP status code in this case "200 OK" which tells us the request has completed successfully
 Line 2 - this tells uis the web server software and version num
@@ -180,7 +180,8 @@ Cookies
 - because HTTP is stateless (doesn't keep track of your previous requests) -> cookies can be used to remind the web server who you are, some personal settings for the website or whether you've been to the website before
 
 Example HTTP request
-![htttp request](HTTP_request.png "http request")
+
+![htttp request](images/HTTP_request.png "http request")
 
 - cookies can be used for many purposes 
 - most commonly used for website auth
@@ -213,4 +214,4 @@ Make a PUT request to /user/2 page with the username parameter set to admin
 Make a POST request to /login page with the username of thm and a password of letmein
 - THM{HTTP_REQUEST_MASTER}
 
-![practical_example](practical_example.png "practical_example")
+![practical_example](images/url_example.png "practical_example")

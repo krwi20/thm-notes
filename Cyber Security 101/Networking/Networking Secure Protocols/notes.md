@@ -71,7 +71,7 @@ Technical Background
 
 - the scrnshot below shows the trusted authorities installed in a web browser
 
-![browser_trused_authorities](browser_trused_authorities.png "browser_trused_authorities")
+![browser_trused_authorities](images/browser_trused_authorities.png "browser_trused_authorities")
 
 - generally speaking getting a cert signed requires paying an annual fee
 - however 'Let's Encrypt' allows you to get your cert signed for free
@@ -95,7 +95,7 @@ HTTP
 - the scrnshot below is from the prev room
 - it gives a clear idea of how an adversary can easily read all the traffic exchanged between the client and the server
 
-![wireshark_http_example](wireshark_http_example.png "wireshark_http_example")
+![wireshark_http_example](images/wireshark_http_example.png "wireshark_http_example")
 
 - lets take a min to review the most common steps before a web browser can request a page over HTTP
 - after resolving the domain name to an IP addr the client will carry out the following 2 steps:
@@ -108,7 +108,7 @@ HTTP
 - the HTTP communication is marked with 2
 - the last 3 displayed packets are for TCP connection termination and are marked with 3
 
-![wireshark_3_way_handshake_example](wireshark_3_way_handshake_example.png "wireshark_3_way_handshake_example")
+![wireshark_3_way_handshake_example](images/wireshark_3_way_handshake_example.png "wireshark_3_way_handshake_example")
 
 HTTP Over TLS
 
@@ -123,7 +123,7 @@ HTTP Over TLS
 - finally HTTP application data is exchanged, marked with 3
 - looking at the Wireshark scrnshot we see that it says "Application Data" because there is no way to know what if it is indeed HTTP or some other protocol sent over port 443
 
-![wireshark_3_way_handshake_https_example](wireshark_3_way_handshake_https_example.png "wireshark_3_way_handshake_https_example")
+![wireshark_3_way_handshake_https_example](images/wireshark_3_way_handshake_https_example.png "wireshark_3_way_handshake_https_example")
 
 - as expected if one tries to follow the stream of packets and combine all their contents they will only get gibberish as shown in the scrnshot below
 - the exchanged traffic is encrypted
@@ -131,7 +131,7 @@ HTTP Over TLS
 - the BLUE is sent by the server
 - there is no way to know without acquiring the encryption key
 
-![wireshark_https_data_example](wireshark_https_data_example.png "wireshark_https_data_example")
+![wireshark_https_data_example](images/wireshark_https_data_example.png "wireshark_https_data_example")
 
 Getting the Encryption Key
 - adding TLS to HTTP leads to all the packets being encrypted
@@ -142,12 +142,12 @@ Getting the Encryption Key
 - the main difference starts with the HTTP protocol marked 3
 - for instance we can see when the client issues a 'GET'
 
-![wireshark_https_decryption_key_example](wireshark_https_decryption_key_example.png "wireshark_https_decryption_key_example")
+![wireshark_https_decryption_key_example](images/wireshark_https_decryption_key_example.png "wireshark_https_decryption_key_example")
 
 - if you want to see the data exchanged now is your chance
 - it is still regular HTTP traffic hidden from prying eyes
 
-![wireshark_https_decryption_data_example](wireshark_https_decryption_data_example.png "wireshark_https_decryption_data_example")
+![wireshark_https_decryption_data_example](images/wireshark_https_decryption_data_example.png "wireshark_https_decryption_data_example")
 
 - the key takeaway is that TLS offered security for HTTP without requiring changes in the lower or higher layer protocols
 - in other words TCP and IP were not modified while HTTP was sent over TLS the way it would be sent over TCP
@@ -167,11 +167,11 @@ SMTPS, POP3S and IMAPS
 
 - the insecure versions use the default TCP port numbers shown in the table below
 
-![insecure_tcp_port_numbers](insecure_tcp_port_numbers.png "insecure_tcp_port_numbers")
+![insecure_tcp_port_numbers](images/insecure_tcp_port_numbers.png "insecure_tcp_port_numbers")
 
 - the secure versions e.g. over TLS use the following TCP port numbers by default
 
-![secure_tcp_port_numbers](secure_tcp_port_numbers.png "secure_tcp_port_numbers")
+![secure_tcp_port_numbers](images/secure_tcp_port_numbers.png "secure_tcp_port_numbers")
 
 - TLS can be added to many other protocols, the reasoning and advantages would be similar
 
@@ -208,7 +208,7 @@ SSH
 - e.g. 'ssh 192.168.124.148 -X' 
 - the local system needs to have a suitable graphical system installed
 
-![ssh_gui_example](ssh_gui_example.png "ssh_gui_example")
+![ssh_gui_example](images/ssh_gui_example.png "ssh_gui_example")
 
 - while the TELNET server listens on port 23 
 - the SSH port listens on port 22
@@ -239,7 +239,7 @@ SFTP and FTPS
 Click on the View Site button to access the related site. Please follow the instructions on the site to obtain the flag.
 - THM{Protocols_secur3d}
 
-![practical_answers](practical_answers.png "practical_answers")
+![practical_answers](images/practical_answers.png "practical_answers")
 
 VPN
 - consider a company with offices in different geographical locations
@@ -265,13 +265,13 @@ VPN
 - the VPN traffic is limited to the blue lines
 - the green lines would carry the decrypted VPN traffic 
 
-![vpn_two_remote_branches_example](vpn_two_remote_branches_example.png "vpn_two_remote_branches_example")
+![vpn_two_remote_branches_example](images/vpn_two_remote_branches_example.png "vpn_two_remote_branches_example")
 
 - in the network diagram below 
 - we see two remote users using VPN clients to connect to the VPN server in the main branch
 - in this case the VPN client connects to a single device
 
-![vpn_two_remote_connecting_to_main_branch_example](vpn_two_remote_connecting_to_main_branch_example.png "vpn_two_remote_connecting_to_main_branch_example")
+![vpn_two_remote_connecting_to_main_branch_example](images/vpn_two_remote_connecting_to_main_branch_example.png "vpn_two_remote_connecting_to_main_branch_example")
 
 - once a VPN tunnel is established
 - all our internet traffic will usually be routed over the VPN connection i.e. via the VPN tunnel
@@ -286,7 +286,7 @@ VPN
 - such as redirecting them to the Japanese version of the service
 - the scrnshot below shows the google search page after connecting to a VPN server in Japan
 
-![jpn_vpn_example](jpn_vpn_example.png "jpn_vpn_example")
+![jpn_vpn_example](images/jpn_vpn_example.png "jpn_vpn_example")
 
 - finally although in many scenarios one would establish a VPN connection to route all traffic over the VPN tunnel
 - some VPN connections dont do this
@@ -328,7 +328,7 @@ Challenge
 - from the submenu select 'Transport Layer Security'
 - thirdly click on 'Open Transport Layer Security preferences'
 
-![challenge_scrnshot_1](challenge_scrnshot_1.png "challenge_scrnshot_1")
+![challenge_scrnshot_1](images/challenge_scrnshot_1.png "challenge_scrnshot_1")
 
 - clicking 'Open Transport Layer Security preferences' will show a dialog box
 - you must click the 'browse' button marked with four to locate the 'ssl-key.log'
@@ -336,9 +336,9 @@ Challenge
 - finally click OK and Wireshark will show all the TLS decrypted
 - one of these packets contains login credentials
 
-![challenge_scrnshot_2](challenge_scrnshot_2.png "challenge_scrnshot_2")
+![challenge_scrnshot_2](images/challenge_scrnshot_2.png "challenge_scrnshot_2")
 
 One of the packets contains login credentials. What password did the user submit?
 - THM{B8WM6P}
 
-![challenge_answer_scrnshot](challenge_answer_scrnshot.png "challenge_answer_scrnshot")
+![challenge_answer_scrnshot](images/challenge_answer_scrnshot.png "challenge_answer_scrnshot")

@@ -12,7 +12,7 @@ Star topology
 - still prone to failure -> if centralised hardware that connects devices fails -> devices can no longer send or receive data
 - often robust
 
-![start_topology](start_topology.png "start_topology")
+![start_topology](images/start_topology.png "start_topology")
 
 Bus topology
 - relies upon a single connection known as a backbone cable
@@ -23,7 +23,7 @@ Bus topology
 - little redundancy in place in case of failures -> single point of failure along the backbone cable
 - if that cable were to break -> devices can no longer receive or transmit data along the bus
 
-![bus_topology](bus_topology.png "bus_topology")
+![bus_topology](images/bus_topology.png "bus_topology")
 
 Ring topology
 - also known as token topology
@@ -36,7 +36,7 @@ Ring topology
 - less prone to bottlenecks -> large amounts of traffic are not travelling across the network at any one time
 - a fault such as a cable cut or broken device -> entire network breaks
 
-![ring_topology](ring_topology.png "ring_topology")
+![ring_topology](images/ring_topology.png "ring_topology")
 
 What is a switch?
 - dedicated devices within a network that are designed to aggregate multiple other devices (computers, printers, any other networking-capable device using ethernet)
@@ -49,7 +49,7 @@ What is a switch?
 - if one path goes down -> another can be used
 - whilst this may reduce overall performance of a network because packets have to take longer to travel -> there is no downtime
 
-![switch_example](switch_example.png "switch_example")
+![switch_example](images/switch_example.png "switch_example")
 
 What is a router?
 - router's job to connect networks and pass data between them
@@ -58,7 +58,7 @@ What is a router?
 - routing involves creating a path between networks so that this data can be successfuly delivered
 - usesful when devices are connected by many paths
 
-![router_example](router_example.png "router_example")
+![router_example](images/router_example.png "router_example")
 
 What does LAN stand for?
 - Local Area Network
@@ -154,7 +154,7 @@ How does ARP work?
 - when the other devices receive that message -> only respond if they own that IP addr and will send an ARP Reply with its MAC addr
 - the requesting device can now remember this mapping and store it in its ARP Cache for future use
 
-![arp_example](arp_example.png "arp_example")
+![arp_example](images/arp_example.png "arp_example")
 
 What does ARP stand for?
 - Address Resolution Protocol
@@ -176,7 +176,7 @@ DHCP (Dynamic Host Configuration Protocol)
 - device then sends a reply confirming it wants the offered IP addr (DHCP Request)
 - lastly the DHCP server sends a reply acknowledging this has been completed -> device can start using the IP addr (DHCP ACK)
 
-![dhcp_example](dhcp_example.png "dhcp_example")
+![dhcp_example](images/dhcp_example.png "dhcp_example")
 
 What type of DHCP packet is used by a device to retrieve an IP address?
 - DHCP Discover

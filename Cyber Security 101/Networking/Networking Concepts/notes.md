@@ -43,7 +43,7 @@ Layer 2 - Data Link Layer
 - usually expressed in hexadecimal format with a : seperating each 2 hexadecimal digits (one byte)
 = the three leftmost bytes identify the vendor
 
-![mac_address_example](mac_address_example.png "mac_address_example")
+![mac_address_example](images/mac_address_example.png "mac_address_example")
 
 - we expect to see 2 MAC addresses in each frame in real network communication over Ethernet or WiFI
 - the packet in the screenshot below shows
@@ -51,7 +51,7 @@ Layer 2 - Data Link Layer
 - the source data link address (MAC address) highlighted in blue
 - the remaining bits shows the data being sent
 
-![wireshark_layer_2_example](wireshark_layer_2_example.png "wireshark_layer_2_example")
+![wireshark_layer_2_example](images/wireshark_layer_2_example.png "wireshark_layer_2_example")
 
 Layer 3 - Network Layer
 - focuses on sending data between two nodes on the same network segment
@@ -68,7 +68,7 @@ Layer 3 - Network Layer
 - you can also notice two paths connecting the two computers
 - the network layer will route the network packets through the path it deems better
 
-![network_layer_example](network_layer_example.png "network_layer_example")
+![network_layer_example](images/network_layer_example.png "network_layer_example")
 
 - examples of the network layer include Internet Protocol (IP), Internet Control Message Protocol (ICMP), and Virtual Private Network (VPN) protocols such as IPSec and SSL/TLS VPN
 
@@ -98,7 +98,7 @@ Summary
 - however it becomes easier as you progress in your study of networking protocols
 - to help with your studies here is a table of the summary of the ISO OSI layers
 
-![osi_iso_model_table](osi_iso_model_table.png "osi_iso_model_table")
+![osi_iso_model_table](images/osi_iso_model_table.png "osi_iso_model_table")
 
 Which layer is responsible for end-to-end communication between running applications?
 - 4 Transport Layer
@@ -131,7 +131,7 @@ TCP/IP Model
 
 - the table below shows how the TCP/IP model layers map to the ISO/OSI model layers
 
-![tcpip_table](tcpip_table.png "tcpip_table")
+![tcpip_table](images/tcpip_table.png "tcpip_table")
 
 - many modern networking textbooks show the TCP/IP model as five layers instead of four
 - for example in Computer Networking: A Top-Down Approach 8th Edition
@@ -172,7 +172,7 @@ IP Addresses and Subnets
 - being 8 bits an octet allows us to represent a decimal number between 0 and 255
 - an IP addr is shwon in the image below
 
-![ip_addr_example](ip_addr_example.png "ip_addr_example")
+![ip_addr_example](images/ip_addr_example.png "ip_addr_example")
 
 - at the risk of oversimplifying things
 - the 0 and 255 are reserved for the network and broadcast addresses respetively
@@ -189,7 +189,7 @@ Looking Up Your Network Configuration
 - which can be typed as 'ip a s' 
 - in the terminal below we show 'ifconfig'
 
-![ifconfig_example](ifconfig_example.png "ifconfig_example")
+![ifconfig_example](images/ifconfig_example.png "ifconfig_example")
 
 - the terminal output above indicates the following
 - the host (laptop) IP addr is 192.168.66.89
@@ -198,7 +198,7 @@ Looking Up Your Network Configuration
 
 - let's use 'ip a s' to compare how the network card IP addr is presented
 
-![ip_a_s_example](ip_a_s_example.png "ip_a_s_example")
+![ip_a_s_example](images/ip_a_s_example.png "ip_a_s_example")
 
 - the terminal output above indicates the following
 - the host (laptop) IP addr is 192.168.66.89/24
@@ -242,7 +242,7 @@ Routing
 - usually a data packet passes through multiple routers before it reaches its final destination
 - the router functions at layer 3, inspecting the IP addr and forwarding the packets to the best network (router) so the packet gets closer to its destination
 
-![routing_diagram_example](routing_diagram_example.png "routing_diagram_example")
+![routing_diagram_example](images/routing_diagram_example.png "routing_diagram_example")
 
 Which of the following IP addresses is not a private IP address?
 - 192.168.250.125
@@ -309,7 +309,7 @@ TCP
 2. SYN-ACK Packet - the server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server
 3. ACK Packet - the three way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet
 
-![three_way_handshake_example](three_way_handshake_example.png "three_way_handshake_example")
+![three_way_handshake_example](images/three_way_handshake_example.png "three_way_handshake_example")
 
 - similar to UDP, TCP identifies the process of initiating or waiting (listening) for a connection using port numbers
 - as stated a valid port number ranges between 1 and 65535 because it uses 2 octets and port 0 is reserved
@@ -338,7 +338,7 @@ Encapsulation
 - again at the network layer we add the proper IP header to get an IP packet that can be routed over the internet
 - finally we add the appropriate header and trailer to get a WiFI or Ethernet frame at the link layer
 
-![encapsulation_example](encapsulation_example.png "encapsulation_example")
+![encapsulation_example](images/encapsulation_example.png "encapsulation_example")
 
 - the process has to be reversed on the receiving end until the application data is extracted
 
@@ -384,12 +384,12 @@ Telnet
 - in the terminal below we connect to the target VM at the echos server's TCP port number 7
 - to close a connection press the 'CTRL + ]' keys simultaneously
 
-![telnet_echo_example](telnet_echo_example.png "telnet_echo_example")
+![telnet_echo_example](images/telnet_echo_example.png "telnet_echo_example")
 
 - in the terminal below we use telnet to connect to the daytime server listening at port 13
 - we notice that the connection closes once the current date and time are returned
 
-![telnet_daytime_server_example](telnet_daytime_server_example.png "telnet_daytime_server_example")
+![telnet_daytime_server_example](images/telnet_daytime_server_example.png "telnet_daytime_server_example")
 
 - finally lets requesta  web page using telnet
 - after connecting to port 80 you need to issue the command 'GET / HTTP/1.1' abd identify the host where anything goes
@@ -401,7 +401,7 @@ Telnet
 
 Use telnet to connect to the web server on 10.80.155.32. What is the name and version of the HTTP server?
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 - lighttpd/1.4.63
 

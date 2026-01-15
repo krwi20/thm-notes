@@ -34,7 +34,7 @@ DHCP: Give Me My Network Settings
 - the server listens on UDP port 67 and the client sends from UDP port 68
 - your smartphone and laptop are configured to use DHCP by default
 
-![dora_example](dora_example.png "dora_example")
+![dora_example](images/dora_example.png "dora_example")
 
 - DHCP follows four steps: Discover, Offer, Request and Acknowledge (DORA)
 
@@ -43,12 +43,12 @@ DHCP: Give Me My Network Settings
 3. DHCP Request: the client responds with a DHCPREQUEST message to indicate that it has accepted the offered IP
 4. DHCP Acknowledge: the server responds with a DHCPACK message to confirm that the offered IP addr is now assigned to the client
 
-![dora_example_2](dora_example_2.png "dora_example_2")
+![dora_example_2](images/dora_example_2.png "dora_example_2")
 
 - the following packet capture shows the four steps explained above
 - in this example the client gets the addr 192.168.66.133
 
-![dora_terminal_example](dora_terminal_example.png "dora_terminal_example")
+![dora_terminal_example](images/dora_terminal_example.png "dora_terminal_example")
 
 - in the DHCP packet exchange we can notice the following:
 - the client starts without any IP network config, it only has a MAC addr, in the first and third packets DHCP Discover and DHCP Request, the client searching for a DHCP server still has no IP network config and has not yet used the DHCP servers offered IP addr. Therefore it sends packet from the IP addr 0.0.0.0 to the broadcast IP addr 255.255.255.255
@@ -97,7 +97,7 @@ ARP: Bridging Layer 3 Addressing to Layer 2 Addressing
 - Source MAC addr
 - Type (IPv4 in this case)
 
-![ip_packet_within_ethernet_frame_example](ip_packet_within_ethernet_frame_example.png "ip_packet_within_ethernet_frame_example")
+![ip_packet_within_ethernet_frame_example](images/ip_packet_within_ethernet_frame_example.png "ip_packet_within_ethernet_frame_example")
 
 - Address Resolution Protocol (ARP) makes it possible to find the MAC addr of another device on the Ethernet
 - in the example below:
@@ -107,19 +107,19 @@ ARP: Bridging Layer 3 Addressing to Layer 2 Addressing
 - the ARP reply arrived shortly afterwards and the host with the IP addr 192.168.66.1 responded with its MAC addr
 - from this point the two hosts can exchange data link layer frames
 
-![arp_terminal_example](arp_terminal_example.png "arp_terminal_example")
+![arp_terminal_example](images/arp_terminal_example.png "arp_terminal_example")
 
 - if we use 'tcpdump' the packets will be displayed differently
 - it uses the terms ARP request and ARP reply
 - for you information the output is shown in the terminal below
 
-![tcpdump_example](tcpdump_example.png "tcpdump_example")
+![tcpdump_example](images/tcpdump_example.png "tcpdump_example")
 
 - an ARP request or ARP reply is not encapsulated within a UDP or even IP packet
 - it is encapsulated directly within an Ethernet frame
 - the following ARP reply shows this
 
-![arp_reply_example](arp_reply_example.png "arp_reply_example")
+![arp_reply_example](images/arp_reply_example.png "arp_reply_example")
 
 - ARP is considered layer 2 because it deals with MAC addresses
 - others would argue that it is part of layer 3 because it supports IP operations
@@ -144,18 +144,18 @@ Ping
 - the 'ping' command sends an ICMP Echo Request (ICMP Type 8)
 - the scrnshot below shows the ICMP message within an IP packet
 
-![icmp_ping_example](icmp_ping_example.png "icmp_ping_example")
+![icmp_ping_example](images/icmp_ping_example.png "icmp_ping_example")
 
 - the computer on the receiving end responds with an ICMP Echo Reply (ICMP Type 0)
 
-![icmp_ping_reply_example](icmp_ping_reply_example.png "icmp_ping_reply_example")
+![icmp_ping_reply_example](images/icmp_ping_reply_example.png "icmp_ping_reply_example")
 
 - many things might prevent us from getting a reply
 - in addition to the possibility of the target system being offline or shut down
 - a firewall along the path might block the necessary packets for 'ping' to work
 - in the example below we used '-c 4' to tell 'ping' command to stop after sending 4 packets
 
-![ping_c_4_example](ping_c_4_example.png "ping_c_4_example")
+![ping_c_4_example](images/ping_c_4_example.png "ping_c_4_example")
 
 - the output shows no packet loss
 - moreover it calculates the minimum, average and maximum and standard deviation (mdev) of the round-trip time (RTT)
@@ -176,7 +176,7 @@ Traceroute
 - this would let us look up their domain name and discover their geographic location
 - finally there is always a possibility that an ICMP Time Encoded message gets blocked and never reaches us
 
-![traceroute_console_example](traceroute_console_example.png "traceroute_console_example")
+![traceroute_console_example](images/traceroute_console_example.png "traceroute_console_example")
 
 - the traversed route might change as we rerun the command
 
@@ -193,7 +193,7 @@ Routing
 - although this is an overly simplified diagram
 - we need some algorithm to figure out how to connect Network 1 to Network 2 and Network 3 and vice versa
 
-![network_diagram_1](network_diagram_1.png "network_diagram_1")
+![network_diagram_1](images/network_diagram_1.png "network_diagram_1")
 
 - lets consider a more detailed diagram
 - the internet would be millions of routers and billions of devices
@@ -205,7 +205,7 @@ Routing
 - connecting the mobile user and the web server
 - we need a routing algorithm for the router to figure out which link to use
 
-![network_diagram_2](network_diagram_2.png "network_diagram_2")
+![network_diagram_2](images/network_diagram_2.png "network_diagram_2")
 
 - the routing algorithms are beyond the scope of this room 
 - however we will briefly describe a few routing protocols so we become familiar with their names
@@ -250,7 +250,7 @@ NAT
 - as shown in the translation table
 - the router does this address translation seamlessly
 
-![nat_router_example](nat_router_example.png "nat_router_example")
+![nat_router_example](images/nat_router_example.png "nat_router_example")
 
 In the network diagram above, what is the public IP that the phone will appear to use when accessing the Internet?
 - 212.3.4.5

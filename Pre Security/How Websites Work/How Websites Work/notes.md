@@ -2,7 +2,7 @@
 - it will respond with data that your browser uses to show you the page
 - a web server is just a dedicated computer somewhere else in the world that handles your requests
 
-![how_website_works_example](how_website_works_example.png "how_website_works_example")
+![how_website_works_example](images/how_website_works_example.png "how_website_works_example")
 
 - there are 2 major components that make up a website
 1. Fornt End (Client-Side) - the way your browser renders a website
@@ -81,4 +81,4 @@ HTML injection
 - general rule is to never trust user input
 - to prevent malicious input the web dev should sanitise everything the user enters before using it in the js function
 
-![html_injection_example](html_injection_example.png "html_injection_example")
+![html_injection_example](images/html_injection_example.png "html_injection_example")

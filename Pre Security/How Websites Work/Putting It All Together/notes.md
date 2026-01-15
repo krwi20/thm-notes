@@ -18,7 +18,7 @@ Load Balancers
 - load balancers also perform periodic checks with each server to ensure they are running correctly -> known as health check
 - if a server does not respond appropriately or doesnt respond, the load balancer will stop sending traffic until it responds appropriately again
 
-![load_balancer_example](load_balancer_example.png "load_balancer_example")
+![load_balancer_example](images/load_balancer_example.png "load_balancer_example")
 
 CND (Content Delivery Networks)
 - can be an excellent resource for cutting down traffic to a busy website
@@ -40,7 +40,7 @@ WAF (Web Application Firewall)
 - limit rating -> only allow a certain amount of reqs from an IP per second
 - if a req is deemed a potential attack, it will be dropped and never sent to the webserver
 
-![waf_example](waf_example.png "waf_example")
+![waf_example](images/waf_example.png "waf_example")
 
 What can be used to host static files and speed up a clients visit to a website?
 - CDN
@@ -107,9 +107,9 @@ Does the client see the backend code? Yay/Nay
 
 Quiz
 
-![quiz_part_1](quiz_part_1.png "quiz_part_1")
+![quiz_part_1](images/quiz_part_1.png "quiz_part_1")
 
-![quiz_part_2](quiz_part_2.png "quiz_part_2")
+![quiz_part_2](images/quiz_part_2.png "quiz_part_2")
 
 Flag
 - THM{YOU_GOT_THE_ORDER}

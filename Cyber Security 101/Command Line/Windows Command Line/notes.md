@@ -23,18 +23,18 @@ Basic System Information
 - you can issue the command 'set' to check your path from the command line
 - the terminal output below shows the path where MS Windows will exectute commands as indicated by the line starting with Path=
 
-![set_example](set_example.png "set_example")
+![set_example](images/set_example.png "set_example")
 
 - let's use the 'ver' command to determine the Operating System version
 
-![ver_example](ver_example.png "ver_example")
+![ver_example](images/ver_example.png "ver_example")
 
 - enough warming up!
 - lets disvoer more in-depth information about the systemm
 - we can run the 'systemninfo' command to list various info bout the system such as
 - OS info, system details, processor and memory
 
-![systeminfo_example](systeminfo_example.png "systeminfo_example")
+![systeminfo_example](images/systeminfo_example.png "systeminfo_example")
 
 - before moving on its good to mention a couple of tricks
 - first you can pipe 'more' if the output is too long
@@ -56,12 +56,12 @@ Network Configuration
 - you can check your network information using 'ipconfig'
 - the terminal output below shows our IP address, subnet mask, and default gateway
 
-![ipconfig_example](ipconfig_example.png "ipconfig_example")
+![ipconfig_example](images/ipconfig_example.png "ipconfig_example")
 
 - you can also use 'ipconfig /all' for more information about your network config
 - in the terminal below we can view our DNS servers and confirm that DHCP is enabled
 
-![ipconfig_all_example](ipconfig_all_example.png "ipconfig_all_example")
+![ipconfig_all_example](images/ipconfig_all_example.png "ipconfig_all_example")
 
 Network Troubleshooting
 - one common troubleshooting task is checking if the server can access a particular server on the internet
@@ -74,7 +74,7 @@ Network Troubleshooting
 - we have successfully receieved four replies
 - furthermore we got some statistics, for instance, the average round trip time is 78 milliseconds
 
-![ping_example](ping_example.png "ping_example")
+![ping_example](images/ping_example.png "ping_example")
 
 - another valuable tool is 'tracert' which stands for trace route
 - the command 'tracert target_name' 
@@ -83,7 +83,7 @@ Network Troubleshooting
 - its time-to-live (TTL) has reached zero
 - the terminal output below shows that we passed through 15 routes before reaching our target
 
-![tracert_example](tracert_example.png "tracert_example")
+![tracert_example](images/tracert_example.png "tracert_example")
 
 More Networking Commands
 - one networking command worth knowing is 'nslookup'
@@ -93,14 +93,14 @@ More Networking Commands
 - the terminal below shows the output of both commands
 - the results are identical, however you can see that the answers retrieved were from different name servers
 
-![nslookup_example](nslookup_example.png "nslookup_example")
+![nslookup_example](images/nslookup_example.png "nslookup_example")
 
 - the final command we will cover in this room is 'netstat'
 - this command displays current network connections and listening ports
 - a basic 'netstat' command with no args will show you established connections
 - as shown below, in this case we only have one SSH connection; we figured out its SSH because its bound to port 22
 
-![netstat_example](netstat_example.png "netstat_example")
+![netstat_example](images/netstat_example.png "netstat_example")
 
 - if you are curious about the other options you can run 'netstat -h' where -h displays the help page
 - we opted for the following options:
@@ -115,7 +115,7 @@ More Networking Commands
 - as shown on the first line
 - we can also see the process ID (PID) associated with each connection
 
-![netstat_abon_example](netstat_abon_example.png "netstat_abon_example")
+![netstat_abon_example](images/netstat_abon_example.png "netstat_abon_example")
 
 Which command can we use to look up the server’s physical address (MAC address)?
 - ipconfig /all
@@ -136,7 +136,7 @@ Working with Directories
 
 - you can view the child directories using 'dir'
 
-![cd_dir_example](cd_dir_example.png "cd_dir_example") 
+![cd_dir_example](images/cd_dir_example.png "cd_dir_example") 
 
 - note that you can use the following options with 'dir'
 - 'dir /a' - displays hidden and system files as well
@@ -144,14 +144,14 @@ Working with Directories
 
 - you can type 'tree' to visually represent the child directories and subdirectories
 
-![tree_example](tree_example.png "tree_example")
+![tree_example](images/tree_example.png "tree_example")
 
 - you can change to any directory by using the command 'cd target_directory'
 - this is equivalent to double-clicking target_directory on your Desktop
 - furthermore you can use 'cd ..' to go up on level
 - example shown below
 
-![cd_example](cd_example.png "cd_example")
+![cd_example](images/cd_example.png "cd_example")
 
 - to create a directory use 'mkdir directory_name'
 - 'mkdir' stands for make directory
@@ -159,7 +159,7 @@ Working with Directories
 - 'rmdir' stands for remove directory
 - the terminal output below shows creating and deleting a directory
 
-![mkdir_rmdir_example](mkdir_rmdir_example.png "mkdir_rmdir_example")
+![mkdir_rmdir_example](images/mkdir_rmdir_example.png "mkdir_rmdir_example")
 
 Working with Files
 - you are working with the command line
@@ -173,16 +173,16 @@ Working with Files
 - the 'copy' command allows you to copy files from one location to another
 - the following terminal provides an example
 
-![copy_example](copy_example.png "copy_example")
+![copy_example](images/copy_example.png "copy_example")
 
 - similarily you can move files using the 'move' command
 - an example is shwown in the terminal output below
 
-![move_example](move_example.png "move_example")
+![move_example](images/move_example.png "move_example")
 
 - finally we can 'del' or 'erase'
 
-![del_erase_example](del_erase_example.png "del_erase_example")
+![del_erase_example](images/del_erase_example.png "del_erase_example")
 
 - we can use the wildcard character '*' to refer to multiple files
 - for example 'copy *.md C:\Markdown" will copy all files with the extension 'md' into the director C:\Markdown
@@ -196,7 +196,7 @@ Task and Process Management
 - let's discover how to achieve a similar functionality using the command line
 - we can list the running processes 'tasklist'
 
-![tasklist_example](tasklist_example.png "tasklist_example")
+![tasklist_example](images/tasklist_example.png "tasklist_example")
 
 - some filtering is helpful because the output is expected to be very long
 - you can check all available filters by displaying the help page using 'tasklist /?' 
@@ -205,7 +205,7 @@ Task and Process Management
 - note that '/FI' is used to set the filter image name equal 'sshd.exe'
 
 
-![tasklist_param_example](tasklist_param_example.png "tasklist_param_example")
+![tasklist_param_example](images/tasklist_param_example.png "tasklist_param_example")
 
 - with the process ID (PID) we can terminate any task using 'taskkill /PID target_pid'
 - for example if we want to kill the process with PID 4567 we would use command 'taskkill /PID 4567'

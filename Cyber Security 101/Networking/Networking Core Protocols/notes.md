@@ -27,13 +27,14 @@ DNS Remembering Addresses
 - if you want to look up the IP addr of a domain from the command line you can use a tool such as 'nslookup' 
 - consider the example in the terminal below where we look up example.com
 
-![nslookup_example](nslookup_example.png "nslookup_example")
+![nslookup_example](images/nslookup_example.png "nslookup_example")
 
 - the query above led to four packets 
 - in the terminal below we can see that the first and third packets send DNS queries for the A and AAAA records respectively
 - the second and fourth packets show the DNS query responses
 
-![dns_query_response_example](dns_query_response_example "dns_query_response_example")
+![dns_query_response_example](images/dns_query_response_example "dns_query_response_example")
+
 
 Which DNS record type refers to IPv6?
 - AAAA
@@ -63,11 +64,11 @@ WHOIS
 - in the scrnshot below you can see when the record was first created and when it was last updated
 - moreover you can find the registrants name, address, phone and email
 
-![whois_example](whois_example.png "whois_example")
+![whois_example](images/whois_example.png "whois_example")
 
 - in the terminal output below we have used the 'whois' command to look up a domain whose WHOIS record is protected by privacy protection
 
-![protected_whois_example](protected_whois_example.png "protected_whois_example")
+![protected_whois_example](images/protected_whois_example.png "protected_whois_example")
 
 When was the x.com record created? Provide the answer in YYYY-MM-DD format.
 - 1993-04-02
@@ -75,7 +76,7 @@ When was the x.com record created? Provide the answer in YYYY-MM-DD format.
 When was the twitter.com record created? Provide the answer in YYYY-MM-DD format.
 - 2000-01-21
 
-![task_1_answer_example](task_1_answer_example.png "task_1_answer_example")
+![task_1_answer_example](images/task_1_answer_example.png "task_1_answer_example")
 
 HTTP(S): Accessing the Web
 - when you fire up your browser
@@ -97,7 +98,7 @@ HTTP(S): Accessing the Web
 - our browser fetches the web page and displays it perfectly
 - however we are interested in what happens behind the scenes
 
-![browser_webpage_example](browser_webpage_example.png "browser_webpage_example")
+![browser_webpage_example](images/browser_webpage_example.png "browser_webpage_example")
 
 - using Wireshark we can examine the exchange between the firefox browser and the web server more closely
 - the scrnshot below from the Wireshark shows the text sent by our broweser in RED
@@ -105,7 +106,7 @@ HTTP(S): Accessing the Web
 - as you can tell, a lot of info is exchanged between the client and the server that does not get rendered to the user
 - examples include the web server version and when the page was last modified
 
-![wireshark_example](wireshark_example.png "wireshark_example")
+![wireshark_example](images/wireshark_example.png "wireshark_example")
 
 - as you remember from Networking Concepts 
 - we used the 'telnet' client to connect to the web server running on 10.80.187.61 at port 80
@@ -120,7 +121,7 @@ HTTP(S): Accessing the Web
 Use telnet to access the file flag.html on 10.80.187.61. What is the hidden flag?
 - THM{TELNET-HTTP}
 
-![task_2_answer_example](task_2_answer_example.png "task_2_answer_example")
+![task_2_answer_example](images/task_2_answer_example.png "task_2_answer_example")
 
 FTP: Transferring Files
 - unlike HTTP, which is designed to retrieve web pages
@@ -146,7 +147,7 @@ FTP: Transferring Files
 
 - the command exchange via the FTP client is shown in the terminal below
 
-![ftp_terminal_example](ftp_terminal_example.png "ftp_terminal_example")
+![ftp_terminal_example](images/ftp_terminal_example.png "ftp_terminal_example")
 
 - we used Wireshark to exmaine the exchanged messages more closely
 - the clients messages are in RED
@@ -156,14 +157,14 @@ FTP: Transferring Files
 - the client sends 'LIST' to the server
 - one last thing to note is that the directory listing and the file we downloaded are sent over a seperate connection each
 
-![wireshark_ftp_example](wireshark_ftp_example.png "wireshark_ftp_example")
+![wireshark_ftp_example](images/wireshark_ftp_example.png "wireshark_ftp_example")
 
 Using the FTP client ftp on the AttackBox, access the FTP server at 10.80.187.61 and retrieve flag.txt. What is the flag found?
 - THM{FAST-FTP}
 
-![task_3_answer_example_1](task_3_answer_example_1.png "task_3_answer_example_1")
+![task_3_answer_example_1](images/task_3_answer_example_1.png "task_3_answer_example_1")
 
-![task_3_answer_example_2](task_3_answer_example_2.png "task_3_answer_example_2")
+![task_3_answer_example_2](images/task_3_answer_example_2.png "task_3_answer_example_2")
 
 SMTP: Sending Email
 - as with browsing the web and downloading files
@@ -187,7 +188,7 @@ SMTP: Sending Email
 - the terminal below shows an example of an email being sent via 'telnet' 
 - the SMTP server listens on TCP port 25 by default
 
-![smtp_via_telnet_console_example](smtp_via_telnet_console_example.png "smtp_via_telnet_console_example")
+![smtp_via_telnet_console_example](images/smtp_via_telnet_console_example.png "smtp_via_telnet_console_example")
 
 - obviously sending an email using 'telnet' is quite cumbersome
 - however it helps you better understand the commands that your email client issues under the hood
@@ -195,7 +196,7 @@ SMTP: Sending Email
 - the clients messages in RED
 - while the servers responses are in BLUE
 
-![wireshark_smtp_example](wireshark_smtp_example.png "wireshark_smtp_example")
+![wireshark_smtp_example](images/wireshark_smtp_example.png "wireshark_smtp_example")
 
 - now that we have covered some basic HTTP, FTP and SMTP commands
 - you should have gained a solid understanding of how protocols are designed and used
@@ -232,7 +233,7 @@ POP3: Receiving Email
 - the command to connect to the TELNET port is 'telnet 10.80.187.61 110'
 - the exchange below retrieves the email message sent in the previous task
 
-![pop3_terminal_example](pop3_terminal_example.png "pop3_terminal_example")
+![pop3_terminal_example](images/pop3_terminal_example.png "pop3_terminal_example")
 
 - someone capturing the network packets would be able to intercept the exchanged traffic
 - as per previous Wireshark captures
@@ -240,7 +241,7 @@ POP3: Receiving Email
 - and the lines in BLUE are the servers
 - it is also clear that someone capturing the traffic can read the passwords
 
-![pop3_wireshark_example](pop3_wireshark_example.png "pop3_wireshark_example")
+![pop3_wireshark_example](images/pop3_wireshark_example.png "pop3_wireshark_example")
 
 - connecting to a POP3 server requires authentication
 - use the following details when needed
@@ -253,7 +254,7 @@ Looking at the traffic exchange, what is the name of the POP3 server running on 
 Use telnet to connect to 10.80.187.61’s POP3 server. What is the flag contained in the fourth message?
 - 
 
-![task_4_answer_example](task_4_answer_example.png "task_4_answer_example")
+![task_4_answer_example](images/task_4_answer_example.png "task_4_answer_example")
 
 IMAP: Synchronising Email
 - POP3 is enough when working from one device e.g. your favourite email client on your desktop computer
@@ -278,13 +279,13 @@ IMAP: Synchronising Email
 - knowing that IMAP server listens on TCP port 143 by default
 - we will use 'telnet' to connect to 10.80.187.61's port 143 and fetch the message we sent in an earlier task
 
-![imap_terminal_example](imap_terminal_example.png "imap_terminal_example")
+![imap_terminal_example](images/imap_terminal_example.png "imap_terminal_example")
 
 - the scrnshot below shoes the exchanged messages between the client and the server as seen from Wireshark
 - the client only needed to send four commands shown in RED
 - and the "long" server responses are shown in BLUE
 
-![wireshark_imap_example](wireshark_imap_example.png "wireshark_imap_example")
+![wireshark_imap_example](images/wireshark_imap_example.png "wireshark_imap_example")
 
 What IMAP command retrieves the fourth email message?
 - fetch 4 body[]
@@ -299,5 +300,4 @@ Conclusion
 
 - the table below summarises the default port numbers of the protocols we have covered so far:
 
-![protocol_table](protocol_table.png "protocol_table")
-
+![protocol_table](images/protocol_table.png "protocol_table")

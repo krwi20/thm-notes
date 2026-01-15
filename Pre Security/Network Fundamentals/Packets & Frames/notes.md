@@ -72,7 +72,7 @@ Flag - this header determines how the packet should be handled by either the dev
 - three-way handshake -> the term given for the process used to establish a connection between two devices
 - communicates using a few special messages:
 
-![three_way_handshake_example](three_way_handshake_example.png "three_way_handshake_example")
+![three_way_handshake_example](images/three_way_handshake_example.png "three_way_handshake_example")
 
 1. SYN - the initial packet sent by a client during the handshake. this packet is used to initiate a connection and synch the 2 devices together
 2. SYN/ACK - this packet is sent by the receiving device (server) to acknowledge the synch attempt from the client
@@ -100,7 +100,7 @@ TCP closing a connection
 - to initiate the closure of a TCP connection, the device will send a "FIN" packet to the ther device
 - of course with TCP the other device will also have to acknowledge this packet
 
-![three_way_handshake_closing_example](three_way_handshake_closing_example.png "three_way_handshake_closing_example")
+![three_way_handshake_closing_example](images/three_way_handshake_closing_example.png "three_way_handshake_closing_example")
 
 What is the header in a TCP packet that ensures the integrity of data?
 - checksum
@@ -141,7 +141,7 @@ Data - where data e.g. bytes of a file that is being transmitted is stored
 - UDP is stateless
 - no acknowledgement is sent during a connection
 
-![udp_connection_example](udp_connection_example.png "udp_connection_example")
+![udp_connection_example](images/udp_connection_example.png "udp_connection_example")
 
 What does the term "UDP" stand for?
 - User Datagram Protocol

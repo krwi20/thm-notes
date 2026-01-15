@@ -146,7 +146,7 @@ Identifying Hashes
 - it will give you a list of the most probable formats 
 - these two steps are shown in the terminal below
 
-![hash-identifier_example](hash-identifier_example.png "hash-identifier_example")
+![hash-identifier_example](images/hash-identifier_example.png "hash-identifier_example")
 
 Format-Specific Cracking
 - once you have identified the hash that youre dealing with yo ucan tell John to use it while cracking the provided hash using the following syntax:
@@ -169,42 +169,42 @@ Practical
 What type of hash is hash1.txt?
 - md5
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 What is the cracked value of hash1.txt?
 - biscuit
 
-![answer_2](answer_2.png "answer_2)
+![answer_2](images/answer_2.png "answer_2)
 
 What type of hash is hash2.txt?
 - SHA1
 
-![answer_3](answer_3.png "answer_3")
+![answer_3](images/answer_3.png "answer_3")
 
 What is the cracked value of hash2.txt?
 - kangeroo
 
-![answer_4](answer_4.png "answer_4")
+![answer_4](images/answer_4.png "answer_4")
 
 What type of hash is hash3.txt?
 - SHA256
 
-![answer_5](answer_5.png "answer_5")
+![answer_5](images/answer_5.png "answer_5")
 
 What is the cracked value of hash3.txt?
 - microphone
 
-![answer_6](answer_6.png "answer_6")
+![answer_6](images/answer_6.png "answer_6")
 
 What type of hash is hash4.txt?
 - Whirlpool
 
-![answer_7](answer_7.png "answer_7")
+![answer_7](images/answer_7.png "answer_7")
 
 What is the cracked value of hash4.txt?
 - colossal
 
-![answer_8](answer_8.png "answer_8")
+![answer_8](images/answer_8.png "answer_8")
 
 Cracking Windows Authentication Hashes
 - now that we understand the basic syntax and usage of John the Ripper
@@ -240,12 +240,12 @@ Practical
 What do we need to set the --format flag to in order to crack this hash?
 - NT
 
-![answer_9](answer_9.png "answer_9")
+![answer_9](images/answer_9.png "answer_9")
 
 What is the cracked value of this password?
 - mushroom
 
-![answer_10](answer_10.png "answer_10")
+![answer_10](images/answer_10.png "answer_10")
 
 Cracking /etc/shadow Hashes
 - the /etc/shadow file is the file on Linux machines where password hashes are stored
@@ -299,7 +299,7 @@ Practical
 What is the root password?
 - 1234
 
-![answer_11](answer_11.png "answer_11")
+![answer_11](images/answer_11.png "answer_11")
 
 Single Crack Mode
 - so far weve been using Johns wordlist mode to brute-force simple and not-so-simple hashes
@@ -362,7 +362,7 @@ working out:
 - first nano the file hash07.txt and append joker: to the start
 - work out what type of hash it is using online tool -> md5
 
-![answer_12](answer_12.png "answer_12")
+![answer_12](images/answer_12.png "answer_12")
 
 Custom Rules
 - as we explored what John can do in Single Crack Mode
@@ -508,12 +508,12 @@ Practical
 What is the password for the secure.zip file?
 - pass123
 
-![answer_13](answer_13.png "answer_13")
+![answer_13](images/answer_13.png "answer_13")
 
 What is the contents of the flag inside the zip file?
 - THM{w3ll_d0n3_h4sh_r0y4l}
 
-![answer_14](answer_14.png "answer_14")
+![answer_14](images/answer_14.png "answer_14")
 
 Cracking a Password-Protected RAR Archive
 - we can use a similar process to the one we used in the last task to obtain the password for RAR archives
@@ -548,12 +548,12 @@ Practical
 What is the password for the secure.rar file?
 - password
 
-![answer_15](answer_15.png "answer_15")
+![answer_15](images/answer_15.png "answer_15")
 
 What are the contents of the flag inside the rar file?
 - THM{r4r_4rch1ve5_th15_t1m3}
 
-![answer_16](answer_16.png "answer_16")
+![answer_16](images/answer_16.png "answer_16")
 
 Cracking SSH Key Passwords
 - lets explore one more use of John that comes up semi-frequently in CTF challenges
@@ -596,7 +596,7 @@ Practical
 What is the SSH private key password?
 - mango
 
-![answer_17](answer_17.png "answer_17")
+![answer_17](images/answer_17.png "answer_17")
 
 Further Reading
 - its recommended to check out the Openwall Wiki (https://www.openwall.com/john/)

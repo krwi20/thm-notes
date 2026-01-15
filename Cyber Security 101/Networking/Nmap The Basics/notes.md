@@ -61,7 +61,7 @@ Scanning a "Local" Network
 - our IP addr is 192.168.66.89 and we are scanning the 192.168.66.0/24 network
 - the 'nmap -sn 192.168.66.0/24' command and its output are shown in the terminal below 
 
-![scanning_local_net_example](scanning_local_net_example.png "scanning_local_net_example")
+![scanning_local_net_example](images/scanning_local_net_example.png "scanning_local_net_example")
 
 - because we are scanning the local network where we are connected via Ethernet or WiFi
 - we can look up the MAC addresses of the devices
@@ -79,7 +79,7 @@ Scanning a "Remote" Network
 - our system has the IP addr 192.168.66.89 and belongs to the 192.168.66.0/24 network
 - in the terminal below we can scan the target network 192.168.11.0/24 where there are 2 or more routers (hops) to seperate our local system from the target hosts
 
-![scanning_remote_net_example](scanning_remote_net_example.png "scanning_remote_net_example")
+![scanning_remote_net_example](images/scanning_remote_net_example.png "scanning_remote_net_example")
 
 - the nmap output shows that five hosts are up
 - but how did nmap discover this?
@@ -92,7 +92,7 @@ Scanning a "Remote" Network
 - the target didnt response to any
 - we observe several ICMP destination unreachable packets from the 192.168.11.151 router
 
-![remote_net_traffic_example](remote_net_traffic_example.png "remote_net_traffic_example")
+![remote_net_traffic_example](images/remote_net_traffic_example.png "remote_net_traffic_example")
 
 - it is worth noting that we can have more control over how nmap discovers live hosts
 - such as '-PS[portlist]', '-PA[portlist]', '-PU[portlist]' for TCP SYN, TCP ACK, and UDP discovery via the given ports
@@ -138,7 +138,7 @@ Connect Scan
 - in the part marked with '1' you can see how the TCP three-way handhsake was completed and later torn down with a TCP RST-ACK packet by nmap
 - the part marked '2' shows a connection attempt to a closed port and the target system responded with a TCP RST-ACK packet
 
-![connect_scan_wireshark](connect_scan_wireshark.png "connect_scan_wireshark")
+![connect_scan_wireshark](images/connect_scan_wireshark.png "connect_scan_wireshark")
 
 SYN Scan (Stealth)
 - unlike the connect scan which tries to connect to the target TCP port i.e. complete three-way handshake
@@ -154,7 +154,7 @@ SYN Scan (Stealth)
 - the part marked '2' shows a TCP connection attempt to a closed port
 - in this case the packet exchange is the same as in the connect scan
 
-![syn_scan_wireshark](syn_scan_wireshark.png "syn_scan_wireshark")
+![syn_scan_wireshark](images/syn_scan_wireshark.png "syn_scan_wireshark")
 
 Scanning UDP Ports
 - although most services use TCP for communication many use UDP
@@ -167,7 +167,7 @@ Scanning UDP Ports
 - because UDP is simpler than TCP we expect the traffic to differ
 - the scrnshot below shows several ICMP destination unreachable (port unreachable) responses as nmap sends UDP packets to closed UDP ports
 
-![udp_scan_wireshark](udp_scan_wireshark.png "udp_scan_wireshark")
+![udp_scan_wireshark](images/udp_scan_wireshark.png "udp_scan_wireshark")
 
 Limiting the Target Ports
 - nmap scans the most common 1,000 ports by default
@@ -179,17 +179,17 @@ Limiting the Target Ports
 ** note ** that '-p-' scans all the ports and is equivalent to '-p1-65535' and is the best option if you want to be as thorough as possible
 
 Summary
-![summary_table](summary_table.png "summary_table")
+![summary_table](images/summary_table.png "summary_table")
 
 How many TCP ports are open on the target system at MACHINE_IP?
 - 6
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 Find the listening web server on 10.81.152.188 and access it with your browser. What is the flag that appears on its main page?
 -  THM{SECRET_PAGE_38B9P6} 
 
-![answer_2](answer_2.png "answer_2")
+![answer_2](images/answer_2.png "answer_2")
 
 Version Detection: Extract More Information
 
@@ -200,7 +200,7 @@ OS Detection
 - thats actually true however there is no perfectly accurate OS detector
 - the statement that it is between 4.15 and 5.8 is very close as thr target hosts OS is 5.15
 
-![os_detection_example](os_detection_example.png "os_detection_example")
+![os_detection_example](images/os_detection_example.png "os_detection_example")
 
 Service and Version Detection
 - you discovered several open ports and want to know what services are listening on them
@@ -208,7 +208,7 @@ Service and Version Detection
 - this is very convenient for gathering more information about your target with fewer keystrokes
 - the terminal output below shows an additional column called "VERSION" indicating the detected SSH server version
 
-![service_and_version_detection_example](service_and_version_detection_example.png "service_and_version_detection_example")
+![service_and_version_detection_example](images/service_and_version_detection_example.png "service_and_version_detection_example")
 
 - what if you can have both '-O' and '-sV' and some more in one option?
 - that would be '-A' this option enables OS detection, version scanning and traceroute among other things
@@ -222,12 +222,12 @@ Forcing the Scan
 - this choice can be triggered by adding the '-Pn' option
 
 Summary
-![summar_table_2](summar_table_2.png "summar_table_2")
+![summar_table_2](images/summar_table_2.png "summar_table_2")
 
 What is the name and detected version of the web server running on 10.81.152.188?
 - lighttpd 1.4.74
 
-![answer_3](answer_3.png "answer_3") 
+![answer_3](images/answer_3.png "answer_3") 
 
 Timing: How Fast is Fast
 - nmap provides various options to control the scan speed and timing
@@ -251,27 +251,27 @@ Timing: How Fast is Fast
 - the table below should give you an idea
 - but you will get different results depnding on the network setup and target system
 
-![timing_lab_table](timing_lab_table.png "timing_lab_table")
+![timing_lab_table](images/timing_lab_table.png "timing_lab_table")
 
 - in the following scrnshots we can see the time when nmap sent the different packets
 - in this scrnshot below, with the scan timing being T0 we can see that nmap waited 5 min before moving to the next port
 
-![wireshark_t0](wireshark_t0.png "wireshark_t0")
+![wireshark_t0](images/wireshark_t0.png "wireshark_t0")
 
 - in the scrnshot below nmap waited 15 seconds between every two ports when we set the timing to T1
 
-![wireshark_t1](wireshark_t1.png "wireshark_t1")
+![wireshark_t1](images/wireshark_t1.png "wireshark_t1")
 
 - then the waiting dropped to 0.4 seconds for T2 as shown below
 
-![wireshark_t2](wireshark_t2.png "wireshark_t2")
+![wireshark_t2](images/wireshark_t2.png "wireshark_t2")
 
 - finally in the default case T3 
 - nmap appeared to be running as fast as it could as shown below
 - it is worth repeating that this would look different on a different lab setup
 - however in this particular case nmap considered the connection to the target to be fast and reliable as no packet loss was incurred
 
-![wireshark_t3](wireshark_t3.png "wireshark_t3")
+![wireshark_t3](images/wireshark_t3.png "wireshark_t3")
 
 - a second helpful option is the number of parallel service probes
 - the number of parallel probes can be controlled with '--min-parallelism `<numprobes>`' and '--max-parallelism `<numprobes>`' 
@@ -289,7 +289,7 @@ Timing: How Fast is Fast
 - this option specifies the max time you are willing to wait 
 - it is suitable for slow hosts or hosts with slow network connections
 
-![summar_table_3](summar_table_3.png "summar_table_3")
+![summar_table_3](images/summar_table_3.png "summar_table_3")
 
 What is the non-numeric equivalent of -T4?
 - -T aggressive
@@ -306,7 +306,7 @@ Verbosity and Debugging
 - consider the following terminal output showing the network scan repeated twice
 - in the first case we opted for the deafult output verbosity
 
-![default_verbose_terminal_example](default_verbose_terminal_example.png "default_verbose_terminal_example")
+![default_verbose_terminal_example](images/default_verbose_terminal_example.png "default_verbose_terminal_example")
 
 - then we repeated the same scan
 - however the second time we used the '-v' option for verbosity
@@ -315,7 +315,7 @@ Verbosity and Debugging
 - in the terminal output below we can see how nmap is moving from one stage to another
 - ARP ping scan, parallel DNS resolution, and finally, SYN stealth scan for every live host
 
-![verbosity_option_terminal_example](verbosity_option_terminal_example.png "verbosity_option_terminal_example")
+![verbosity_option_terminal_example](images/verbosity_option_terminal_example.png "verbosity_option_terminal_example")
 
 - most likely the '-v' option is more than enough for verbose output
 - however if you are still unsatisfied you can increase the verbosity level by adding another "v" such as '-vv' or even '-vvvv'
@@ -340,7 +340,7 @@ Saving Scan Report
 - in the terminal below we can see en example of using the '-oA' option
 - it resulted in three reports with the extensions, nmap, xml and gnmap for normal, XML, and grep-able output
 
-![output_terminal_example](output_terminal_example.png "output_terminal_example")
+![output_terminal_example](images/output_terminal_example.png "output_terminal_example")
 
 What option must you add to your nmap command to enable debugging?
 

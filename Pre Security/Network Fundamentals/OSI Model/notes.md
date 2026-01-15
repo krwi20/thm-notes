@@ -62,7 +62,7 @@ Layer 3 - Network
 - at this layer everything is dealt with via IP addresses 
 - devices such as routers capable of delivering packets using IP addr are known as Layer 3 Devices - because they can work in this 3rd layer
 
-![network_layer_example](network_layer_example.png "network_layer_example")
+![network_layer_example](images/network_layer_example.png "network_layer_example")
 
 What is the name of this Layer?
 - Network
@@ -102,7 +102,7 @@ Disadvantages
 - TCP is used for situations such as -> file sharing, internet browsing or sending an email
 - this usage is because these services require the data to be accurate and complete
 
-![transport_layer_tcp_example](transport_layer_tcp_example.png "transport_layer_tcp_example")
+![transport_layer_tcp_example](images/transport_layer_tcp_example.png "transport_layer_tcp_example")
 
 UDP (User Datagram Protocol)
 - not nearly as advanced as TCP
@@ -123,7 +123,7 @@ Disadvantages
 - UDP is useful in situations where there are small pieces of data being sent
 - e.g. protocols used for discovering devices (ARP, DHCP) or larger files such as video streaming (where its okay if some parts of the video are pixelated, pixels are just lost pieces of data)
 
-![transport_layer_udp_example](transport_layer_udp_example.png "transport_layer_udp_example")
+![transport_layer_udp_example](images/transport_layer_udp_example.png "transport_layer_udp_example")
 
 What is the name of this Layer?
 - Transport

@@ -47,7 +47,7 @@ VPN Basics
 - a technology that allows devices on seperate networks to communicate securely by creating a dedicated path between each other over the internet (known as a tunnel) 
 - devices connected within this tunnel form their own private network
 
-![vpn_example](vpn_example.png "vpn_example")
+![vpn_example](images/vpn_example.png "vpn_example")
 
 - e.g. only devices within a same network can directly communicate
 - however a VPN allows two offices to be connected
@@ -98,7 +98,9 @@ What is a switch?
 - these are exclusive in a sense that layer 2 switches can not operate at layer 3
 
 - a layer 2 switch in this diagram will forward frames (remember that the origianl IP packets are encapsulated within frames) onto the connected devices using their MAC addr
-![layer 2 switch](layer_2_switch.png "layer 2 switch")
+
+![layer 2 switch](images/layer_2_switch.png "layer 2 switch")
+
 - these switches are solely responsible for sending frames to the correct device
 
 - a layer 3 switch is more sophisticated
@@ -107,7 +109,8 @@ What is a switch?
 
 - the diagram below is a layer 3 switch in action
 - 2 IP addresses -> 192.168.1.1 & 192.168.2.1
-![layer 3 switch](layer_3_switch.png "layer 3 switch")
+
+![layer 3 switch](images/layer_3_switch.png "layer 3 switch")
 
 - a technology called VLAN (Virtual Local Area Network) allows specific devices within a network to virtually be split up
 - this split means that they can all benefit from things such as an internet connection but are treated seperately

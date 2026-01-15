@@ -113,7 +113,7 @@ The File System
 
 - the below image lists the meaning of each permissions on how it applies to a file and a folder
 
-![ntfs perms](ntfs_permissions.png "ntfs perms")
+![ntfs perms](images/ntfs_permissions.png "ntfs perms")
 
 - how can you view the permissions for a file or folder?
 - right click the file or folder you want to check for permissions

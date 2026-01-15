@@ -47,9 +47,9 @@ What is a Hash Function?
 - we recommend that you try the commands below yourself
 - the files are located in '~/Hashing-Basics/Task-2/#'
 
-![hash_file_check_example](hash_file_check_example.png "hash_file_check_example")
+![hash_file_check_example](images/hash_file_check_example.png "hash_file_check_example")
 
-![hash_file_check_example._personal](hash_file_check_example._personal.png "hash_file_check_example._personal")
+![hash_file_check_example._personal](images/hash_file_check_example._personal.png "hash_file_check_example._personal")
 
 - the output of a hash function is typically raw bytes which are then encoded
 - common encodings are base64 or hexadecimal
@@ -95,7 +95,7 @@ What's a Hash Collision?
 What is the SHA256 hash of the passport.jpg file in ~/Hashing-Basics/Task-2?
 - 77148c6f605a8df855f2b764bcc3be749d7db814f5f79134d2aa539a64b61f02
 
-![answer_1](answer_1.png "answer_1")
+![answer_1](images/answer_1.png "answer_1")
 
 What is the output size in bytes of the MD5 hash function?
 - 16 (count the number of hexadecimal digits and divide by two)
@@ -136,7 +136,7 @@ Storing Passwords in Plaintext
 - the text file contains over 14 million passwords
 - you can find 'rockyou.txt' in the '/usr/share/wordlists' directory
 
-![rockyou_example](rockyou_example.png "rockyou_example")
+![rockyou_example](images/rockyou_example.png "rockyou_example")
 
 Using an Insecure Encryption Algorithm
 - adobe's notable data breach was slightly different
@@ -154,7 +154,7 @@ Using an Insecure Hash Function
 What is the 20th password in rockyou.txt?
 - qwerty
 
-![answer_2](answer_2.png "answer_2")
+![answer_2](images/answer_2.png "answer_2")
 
 Using Hashing to Store Passwords
 - this is where hashing comes in
@@ -173,7 +173,7 @@ Using Hashing to Store Passwords
 - a rainbow table trades the time to crack a hash for hard disk space, but it takes time to create
 - heres a quick example to get an idea of what a rainbow table looks like 
 
-![rainbow_table_example](rainbow_table_example.png "rainbow_table_example")
+![rainbow_table_example](images/rainbow_table_example.png "rainbow_table_example")
 
 - websites like CrackStation (https://crackstation.net/) and Hashes.com (https://hashes.com/en/decrypt/hash) 
 - internally use massive rainbow tables to provide fast password cracking for hashes without salts
@@ -216,7 +216,7 @@ Manually check the hash “4c5923b6a6fac7b7355f53bfe2b8f8c1” using the rainbow
 Crack the hash “5b31f93c09ad1d065c0491b764d04933” using an online tool.
 - tryhackme
 
-![answer_3](answer_3.png "answer_3")
+![answer_3](images/answer_3.png "answer_3")
 
 Should you encrypt passwords in password-verification systems? Yea/Nay
 - nay
@@ -254,12 +254,12 @@ Linux Passwords
 - they are listed in the order of decreasing strength
 - you can read more about them by checking the man page 'man 5 crypt'
 
-![common_unix_style_passwd_prefixes](common_unix_style_passwd_prefixes.png "common_unix_style_passwd_prefixes")
+![common_unix_style_passwd_prefixes](images/common_unix_style_passwd_prefixes.png "common_unix_style_passwd_prefixes")
 
 Modern Linux Example
 - consider the following line from a modernLinux systems shadow password file
 
-![modern_linux_shadow_password_file](modern_linux_shadow_password_file.png "modern_linux_shadow_password_file")
+![modern_linux_shadow_password_file](images/modern_linux_shadow_password_file.png "modern_linux_shadow_password_file")
 
 - the fields are seperated by colons
 - the important ones are the username and the hash algorithm, salt and hash value
@@ -290,12 +290,12 @@ What is the hash size in yescrypt?
 What’s the Hash-Mode listed for Cisco-ASA MD5?
 - 2410
 
-![answer_4](answer_4.png "answer_4")
+![answer_4](images/answer_4.png "answer_4")
 
 What hashing algorithm is used in Cisco-IOS if it starts with $9$?
 - scrypt
 
-![answer_5](answer_5.png "answer_5")
+![answer_5](images/answer_5.png "answer_5")
 
 Password Cracking
 - weve already mentioned rainbow tables as a method to crack hashes that dont use a salt but what if there is a a salt involved?
@@ -355,7 +355,7 @@ working out:
 - dictionary attack "straight mode" -a 0 
 - so we run 'hashcat -m 3200 -a 0 ~/Hashing-Basics/Task-6/hash1.txt /usr/share/wordlists/rockyou.txt
 
-![answer_6](answer_6.png "answer_6")
+![answer_6](images/answer_6.png "answer_6")
 
 Use hashcat to crack the SHA2-256 hash, 9eb7ee7f551d2f0ac684981bd1f1e2fa4a37590199636753efe614d4db30e8e1, saved in saved in ~/Hashing-Basics/Task-6/hash2.txt.
 - halloween
@@ -363,7 +363,7 @@ Use hashcat to crack the SHA2-256 hash, 9eb7ee7f551d2f0ac684981bd1f1e2fa4a375901
 working out:
 - hashcat examples page says hash-mode 1400 for SHA2-256 
 
-![answer_7](answer_7.png "answer_7")
+![answer_7](images/answer_7.png "answer_7")
 
 Use hashcat to crack the hash, $6$GQXVvW4EuM$ehD6jWiMsfNorxy5SINsgdlxmAEl3.yif0/c3NqzGLa0P.S7KRDYjycw5bnYkF5ZtB8wQy8KnskuWQS3Yr1wQ0, saved in ~/Hashing-Basics/Task-6/hash3.txt.
 - spaceman
@@ -372,7 +372,7 @@ working out:
 - $6$ suggests its sha512crypt
 - examples page says 1800 hash-mode for sha512crypt
 
-![answer_8](answer_8.png "answer_8")
+![answer_8](images/answer_8.png "answer_8")
 
 Crack the hash, b6b0d451bbf6fed658659a9e7e5598fe, saved in ~/Hashing-Basics/Task-6/hash4.txt.
 - funforyou
@@ -380,7 +380,7 @@ Crack the hash, b6b0d451bbf6fed658659a9e7e5598fe, saved in ~/Hashing-Basics/Task
 working out:
 - the hint suggested to use an online tool
 
-![answer_9](answer_9.png "answer_9")
+![answer_9](images/answer_9.png "answer_9")
 
 Hashing for Integrity Checking
 - in task 3 we mentioned that we would focus on 2 types of hashing: password storage and data integrity
@@ -396,7 +396,7 @@ Integrity Checking
 - if running 'sha256sum' on the file you downloaded returned the same hash listed in this signed file...
 - you can be confident that your file is identical to the official one
 
-![integrity_checking_example_sha256_sum](integrity_checking_example_sha256_sum.png "integrity_checking_example_sha256_sum")
+![integrity_checking_example_sha256_sum](images/integrity_checking_example_sha256_sum.png "integrity_checking_example_sha256_sum")
 
 - you can also use hashing to find duplicate files
 - if 2 documents have the same hash they are the same document
@@ -424,7 +424,7 @@ HMACs
 
 - the illustration below should clarify the steps
 
-![hmac_steps_example](hmac_steps_example.png "hmac_steps_example")
+![hmac_steps_example](images/hmac_steps_example.png "hmac_steps_example")
 
 - technically speaking the HMAC function is calculated using the following expression:
 - HMAC(K,M) = H((K⊕opad)||H((K⊕ipad)||M))
@@ -434,12 +434,12 @@ HMACs
 What is SHA256 hash of libgcrypt-1.11.0.tar.bz2 found in ~/Hashing-Basics/Task-7?
 - 09120c9867ce7f2081d6aaa1775386b98c2f2f246135761aae47d81f58685b9c
 
-![answer_10](answer_10.png "answer_10")
+![answer_10](images/answer_10.png "answer_10")
 
 What’s the hashcat mode number for HMAC-SHA512 (key = $pass)?
 - 1750
 
-![answer_11](answer_11.png "answer_11")
+![answer_11](images/answer_11.png "answer_11")
 
 Conclusion
 - this room covered hashing functions and their uses from various perspectives
@@ -459,7 +459,7 @@ Encoding
 - examples include Base32 and Base64 encoding
 - consider the following example of using base64 to encode and decode
 
-![base64_encoding_decoding_example](base64_encoding_decoding_example.png "base64_encoding_decoding_example")
+![base64_encoding_decoding_example](images/base64_encoding_decoding_example.png "base64_encoding_decoding_example")
 
 - encoding shuld not be confused with encryption, as using specific encoding does not protect the confidentiality of the message
 - encoding is reversible; anyone can change the data encoding with the right tools
@@ -475,4 +475,4 @@ Encryption
 Use base64 to decode RU5jb2RlREVjb2RlCg==, saved as decode-this.txt in ~/Hashing-Basics/Task-8. What is the original word?
 - ENcodeDEcode
 
-![answer_12](answer_12.png "answer_12")
+![answer_12](images/answer_12.png "answer_12")

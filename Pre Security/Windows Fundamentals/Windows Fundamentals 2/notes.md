@@ -132,11 +132,12 @@ Event Viewer
 - the pane on the right is the actions pane
 
 - there are 5 types of events that can be logged
-![event logging types](event_logging_types.png "event logging types")
+
+![event logging types](images/event_logging_types.png "event logging types")
 
 - the standard logs are visible under Windows Logs
 
-![standard logs](standard_logs.png "standard logs")
+![standard logs](images/standard_logs.png "standard logs")
 
 Shared Folders
 - where you will see a complete list of shares and folders that others can connect to

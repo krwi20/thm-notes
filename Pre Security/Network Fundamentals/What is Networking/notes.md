@@ -29,7 +29,7 @@ octet #2 - 168 (0-255)
 octet #3 - 1 (0-255)
 octet #4 - 1 (0-255)
 
-![ip_example](ip_example.png "ip_example")
+![ip_example](images/ip_example.png "ip_example")
 
 - a set of numbers that are divded into four octets
 - the value of each octet will summarise to be the IP address of the device on the network
@@ -64,7 +64,7 @@ a4:c3:f0:85:ac:2d
 a4:c3:f0 -> vendor who built the network interface
 85:ac:2d -> unique addr of the network interface
 
-![mac_addr_example](mac_addr_example.png "mac_addr_example")
+![mac_addr_example](images/mac_addr_example.png "mac_addr_example")
 
 - MAC addresses can be faked or spoofed
 - spoofing can often break poorly implemented security designs
@@ -97,7 +97,7 @@ Ping (ICMP)
 SYNTAX -> ping IP Address | website URL
        -> ping 192.168.1.254
 
-![ping_example](ping_example.png "ping_example")
+![ping_example](images/ping_example.png "ping_example")
 
 What protocol does ping use?
 - ICMP
