@@ -1,0 +1,67 @@
+# TryHackMe Notes
+This repo contains notes i've taken for each room as well as my answers for the questions. This repo also contains any rooms i have completed with notes and my process in completing them. These notes serve as a reference for cybersec concepts, tools, techniques, methodologies etc covered on TryHackMe.
+
+## Table of Contents
+
+### [Pre Security](Pre%20Security/)
+
+- [Network Fundamentals](Pre%20Security/Network%20Fundamentals/)
+  - [What is Networking?](Pre%20Security/Network%20Fundamentals/What%20is%20Networking/notes.md)
+  - [Intro to LAN](Pre%20Security/Network%20Fundamentals/Intro%20to%20LAN/notes.md)
+  - [OSI Model](Pre%20Security/Network%20Fundamentals/OSI%20Model/notes.md)
+  - [Packets & Frames](Pre%20Security/Network%20Fundamentals/Packets%20&%20Frames/notes.md)
+  - [Extending Your Network](Pre%20Security/Network%20Fundamentals/Extending%20Your%20Network/notes.md)
+- [How The Web Works](Pre%20Security/How%20The%20Web%20Works/)
+  - [DNS in Detail](Pre%20Security/How%20The%20Web%20Works/DNS%20in%20Detail/notes.md)
+  - [HTTP in Detail](Pre%20Security/How%20The%20Web%20Works/HTTP%20in%20Detail/notes.md)
+  - [How Websites Work](Pre%20Security/How%20The%20Web%20Works/How%20Websites%20Work/notes.md)
+  - [Putting it all together](Pre%20Security/How%20The%20Web%20Works/Putting%20It%20All%20Together/notes.md)
+- [Linux Fundamentals](Pre%20Security/Linux%20Fundamentals/)
+  - [Linux Fundamentals Part 1](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%201/notes.md)
+  - [Linux Fundamentals Part 2](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%202/notes.md)
+  - [Linux Fundamentals Part 3](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%203/notes.md)
+- [Windows Fundamentals](Pre%20Security/Windows%20Fundamentals/)
+  - [Windows Fundamentals 1](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%201/notes.md)
+  - [Windows Fundamentals 2](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%202/notes.md)
+  - [Windows Fundamentals 3](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%203/notes.md)
+
+### [Cyber Security 101](Cyber%20Security%20101/)
+
+- [Linux Fundamentals](Pre%20Security/Linux%20Fundamentals/)
+  - [Linux Fundamentals Part 1](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%201/notes.md)
+  - [Linux Fundamentals Part 2](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%202/notes.md)
+  - [Linux Fundamentals Part 3](Pre%20Security/Linux%20Fundamentals/Linux%20Fundamentals%20Part%203/notes.md)
+- [Windows Fundamentals](Pre%20Security/Windows%20Fundamentals/)
+  - [Windows Fundamentals 1](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%201/notes.md)
+  - [Windows Fundamentals 2](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%202/notes.md)
+  - [Windows Fundamentals 3](Pre%20Security/Windows%20Fundamentals/Windows%20Fundamentals%203/notes.md)
+- [Command Line](Cyber%20Security%20101/Command%20Line/)
+  - [Windows Command Line](Cyber%20Security%20101/Command%20Line/Windows%20Command%20Line/notes.md)
+  - [Windows PowerShell](Cyber%20Security%20101/Command%20Line/Windows%20PowerShell/notes.md)
+  - [Linux Shells](Cyber%20Security%20101/Command%20Line/Linux%20Shells/notes.md)
+- [Networking](Cyber%20Security%20101/Networking/)
+  - [Networking Concepts](Cyber%20Security%20101/Networking/Networking%20Concepts/notes.md)
+  - [Networking Essentials](Cyber%20Security%20101/Networking/Networking%20Essentials/notes.md)
+  - [Networking Core Protocols](Cyber%20Security%20101/Networking/Networking%20Core%20Protocols/notes.md)
+  - [Networking Secure Protocols](Cyber%20Security%20101/Networking/Networking%20Secure%20Protocols/notes.md)
+  - [Wireshark: The Basics](Cyber%20Security%20101/Networking/Wireshark%20The%20Basics/notes.md)
+  - [Tcpdump: The Basics](Cyber%20Security%20101/Networking/Tcpdump%20The%20Basics/notes.md)
+  - [Nmap: The Basics](Cyber%20Security%20101/Networking/Nmap%20The%20Basics/notes.md)
+- [Cryptography](Cyber%20Security%20101/Cryptography/)
+  - [Cryptography Basics](Cyber%20Security%20101/Cryptography/Cryptography%20Basics/notes.md)
+  - [Public Key Cryptography Basics](Cyber%20Security%20101/Cryptography/Public%20Key%20Cryptography%20Basics/notes.md)
+  - [Hashing Basics](Cyber%20Security%20101/Cryptography/Hashing%20Basics/notes.md)
+  - [John the Ripper: The Basics](Cyber%20Security%20101/Cryptography/John%20the%20Ripper%20The%20Basics/notes.md)
+- [Exploitation Basics](Cyber%20Security%20101/Exploitation%20Basics/)
+  - [Moniker Link (CVE-2024-21413)](Cyber%20Security%20101/Exploitation%20Basics/Moniker%20Link%20(CVE-2024-21413)/notes.md)
+  - [Metasploit: Introduction](Cyber%20Security%20101/Exploitation%20Basics/Metasploit%20Introduction/notes.md)
+  - [Metasploit: Exploitation](Cyber%20Security%20101/Exploitation%20Basics/Metasploit%20Exploitation/notes.md)
+  - [Metasploit: Meterpreter](Cyber%20Security%20101/Exploitation%20Basics/Metasploit%20Meterpreter/notes.md)
+  - [Blue](Cyber%20Security%20101/Exploitation%20Basics/Blue/notes.md)
+
+
+### [Rooms](Completed%20Rooms/)
+**From Cyber Security 101 Path:**
+- [Blue](Cyber%20Security%20101/Exploitation%20Basics/Blue/notes.md)
+
+*As I complete more standalone rooms, they'll be added here.*
