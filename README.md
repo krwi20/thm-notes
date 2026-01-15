@@ -58,7 +58,11 @@ This repo contains notes i've taken for each room as well as my answers for the 
   - [Metasploit: Exploitation](Cyber%20Security%20101/Exploitation%20Basics/Metasploit%20Exploitation/notes.md)
   - [Metasploit: Meterpreter](Cyber%20Security%20101/Exploitation%20Basics/Metasploit%20Meterpreter/notes.md)
   - [Blue](Cyber%20Security%20101/Exploitation%20Basics/Blue/notes.md)
-
+- [Web Hacking](Cyber%20Security%20101/Web%20Hacking/)
+  - [Web Application Basics](Cyber%20Security%20101/Web%20Hacking/Web%20Application%20Basics/notes.md)
+  - [JavaScript Essentials](Cyber%20Security%20101/Web%20Hacking/Javascript%20Essentials/notes.md)
+  - [SQL Fundamentals](Cyber%20Security%20101/Web%20Hacking/SQL%20Fundamentals/notes.md)
+  - [Burp Suite: The Basics](Cyber%20Security%20101/Web%20Hacking/Burp%20Suite%20The%20Basics/notes.md)
 
 ### [Rooms](Completed%20Rooms/)
 **From Cyber Security 101 Path:**
