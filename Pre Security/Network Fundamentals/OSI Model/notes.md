@@ -4,13 +4,13 @@ OSI Model (Open Systems Interconnection Model)
 - main benefits of the OSI model is that devices can have different functrions and designs on a network while commuinicating with other devices
 - data sent across a networks that follows the uniformity of the model can be understood by other devices 
 
-7. Application
-6. Presentation
-5. Session
-4. Transport
-3. Network
-2. Data link
-1. Physical
+**7.** Application
+**6.** Presentation
+**5.** Session
+**4.** Transport
+**3.** Network
+**2.** Data link
+**1.** Physical
 
 - at every layer the data travels through specific processes take place and pieces of info are added to this data. -> process is called ENCAPSULATION
 
